@@ -449,11 +449,13 @@ img {
   line-height: 1.5;
 }
 
-.stories-group-content ol {
-  line-height: 1.75;
+.stories-group-content ol,
+.stories-group-content ul {
+  line-height: 1.5;
 }
 
-.stories-group-content ol li {
+.stories-group-content ol li,
+.stories-group-content ul li {
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
