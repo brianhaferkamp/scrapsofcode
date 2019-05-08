@@ -449,6 +449,15 @@ img {
   line-height: 1.5;
 }
 
+.stories-group-content ol {
+  line-height: 1.75;
+}
+
+.stories-group-content ol li {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
 .page-headline {
   text-align: center;
   font-weight: 300;
@@ -457,6 +466,19 @@ img {
   font-size: 1rem;
   margin-bottom: 48px;
   margin-bottom: 3rem;
+}
+
+footer {
+  background: #eee;
+  padding: 16px;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0;
 }
 
 .archive-group {
@@ -526,10 +548,6 @@ img {
   .stories-group-date {
     font-size: 1.2rem;
     margin: .5rem 0 2rem;
-  }
-
-  .stories-group-content p {
-    font-size: 1.2rem;
   }
 
   .archive-group-headline {
