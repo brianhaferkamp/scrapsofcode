@@ -427,8 +427,8 @@ img {
 }
 
 .stories-image {
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
+  margin: 48px 0 32px;
+  margin: 3rem 0 2rem;
 }
 
 .stories-group-headline {
@@ -438,9 +438,17 @@ img {
   line-height: 1.2;
 }
 
+.stories-group-subheadline {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 8px 0 0;
+  margin: .5rem 0 0;
+}
+
 .stories-group-date {
-  margin: 8px 0 16px;
-  margin: .5rem 0 1rem;
+  color: #777;
+  margin: 0;
   font-size: 14px;
   font-weight: 300;
 }
@@ -471,7 +479,6 @@ img {
 }
 
 footer {
-  background: #eee;
   padding: 16px;
   padding: 1rem;
   border-radius: 5px;
@@ -479,8 +486,9 @@ footer {
   margin-top: 1rem;
 }
 
-footer p {
-  margin: 0;
+.comment-tweet {
+  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .archive-group {
@@ -544,12 +552,16 @@ footer p {
   }
 
   .stories-group-headline {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .stories-group-subheadline {
+    font-size: 1.5rem;
   }
 
   .stories-group-date {
     font-size: 1rem;
-    margin: .5rem 0 2rem;
+    margin: .5rem 0 1rem;
   }
 
   .archive-group-headline {
