@@ -427,12 +427,13 @@ img {
 }
 
 .stories-image {
-  margin: 48px 0 32px;
-  margin: 3rem 0 2rem;
+  margin: 32px 0;
+  margin: 2rem 0;
 }
 
 .stories-group-headline {
-  margin: 0;
+  margin: 16px 0 0;
+  margin: 1rem 0 0;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.2;
@@ -553,6 +554,7 @@ footer {
 
   .stories-group-headline {
     font-size: 3rem;
+    line-height: 1;
   }
 
   .stories-group-subheadline {
