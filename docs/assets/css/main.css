@@ -352,6 +352,16 @@ img {
   width: 100%;
 }
 
+figure {
+  margin: 0;
+}
+
+figcaption {
+  text-align: right;
+  margin-top: 4.8px;
+  margin-top: .3rem;
+}
+
 .flex-video {
   height: 0;
   margin-bottom: 14.222px;
