@@ -31,9 +31,32 @@
           <div class="stories-group">
             <h4 class="stories-group-date">June 12, 2019</h4>
             <h3 class="stories-group-headline">Sticky Transparent Header</h3>
-            <section class="stories-image flex-video"><iframe src="https://www.youtube.com/embed/a7Hj4BUXST0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+            <section class="stories-image flex-video">
+              <figure><img src="assets/img/full-height-content.jpg"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/ipARHaxETRk" target="_blank">Kobu Agency on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
             <article class="stories-group-content">
-              <p>In this video I show you how to create a sticky header using the <code>{position: sticky}</code> CSS property. What I love about the sticky property is that it keeps the element in the flow of the document. Normally, we use a <code>{position: fixed}</code> to stick an element. This is great but it causes problems with the elements around it. Using <code>{position: sticky}</code> we no longer have to configure padding and margin for elements around the sticky element. It all just sort of works. The only downside is IE and Edge support. But this is a progressive enhancement. In those browsers the element just won't be sticky. You could use <code>@supports</code> to create a feature query for browsers that can utilize the sticky property and then create fixed position on the element for browsers to fall back on.</p>
+              <p>Have you ever had a short piece of content sandwiched between a header and footer that just doesn't take up enough space to force the footer all the way to the bottom of the browser window? This happens to me all the time on redirect pages after form submissions. Here's how it looks:</p>
+              <div class="stories-image"><img src="assets/img/thank-you-page-example.jpg" alt="An example thank you page with a standard header and footer but not enough content in the middle to push the footer to the bottom of the browser window."/></div>
+              <p>What we want to do is push the footer to the bottom. We could use fixed positioning:</p>
+              <p><code><pre>footer {position: fixed; bottom: 0; width: 100%;}</pre></code></p>
+              <p>This is the look that we are going for but doing this takes the footer out of the flow of the document and could mess things up for us later on. Here's how it looks:</p>
+              <div class="stories-image"><img src="assets/img/thank-you-example-fixed.jpg" alt="Showing our thank you page with the CSS position: fixed property applied"/></div>
+              <p>We could also try: <code><pre>footer {min-height: 100vh;}</pre></code></p>
+              <p>That does the trick, but it's a little brute force for my taste. It also pushes the footer past the bottom of the browser's bottom edge. This is what it looks like:</p>
+              <div class="stories-image"><img src="assets/img/thank-you-example-min-height.jpg" alt="Showing our thank you page with the CSS min-height applied"/></div>
+              <p>Okay, now let's get to a better solution. I've found that the best way to do this is to use CSS Grid Layout. First, we apply Grid to our <code>body</code> element:</p>
+              <p><code><pre>body {display: grid; grid-template-rows: auto 1fr auto;}</pre></code></p>
+              <p>This code alone doesn't do anything, but it gives us the framework for the magic to happen. To make the content section take up all the available space, we need to add in a minimum height for the grid we just made. This will make it stretch from the top of the viewport to the bottom of the viewport even if there is not enough content. Here's the code with the <code>min-height</code> property applied to the grid:</p>
+              <p><code><pre>body {display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh;}</pre></code></p>
+              <p>Notice that we are explicitly giving values to the three rows of our grid. The first and last are <code>auto</code> which means the elements will take up whatever space they require. The middle value represents our content section. That should take up all of the remaining space. We do that with the <code>1fr</code> value. Voila! You have a relatively positioned grid that takes up all of the viewport's height at the very least. It will also continue to allow the main content section to grow if you put a lot of content in there and it pushes everything down. The <i>minimum</i> height is 100vh, so it will continue to grow as content pushes the elements down the page past the bottom of the browser window.</p>
+              <p>To center everything, just add this to the main content section:</p>
+              <p><code><pre>#content {place-self: center;}</pre></code></p>
+              <div class="stories-image"><img src="assets/img/thank-you-example-final.jpg" alt="Showing the final version of our thank you page with the centered text"/></div>
+              <p>We now have center-aligned (vertically and horizontally) content inside a main content section that pushes our footer to the bottom of the browser window and doesn't mess up the flow of the document to do it.</p>
+              <div class="stories-image"><iframe src="https://giphy.com/embed/xt3LDDCI8xV0A" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/magic-popkey-xt3LDDCI8xV0A">via GIPHY</a></p></div>
+              <p><a href="https://codepen.io/brianhaferkamp/pen/zVGVdL" target="_blank">I created a pen on CodePen</a> so you can fork this code and fiddle with it or use it in your projects.</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
