@@ -29,34 +29,32 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">June 13, 2019</h4>
-            <h3 class="stories-group-headline">Full Height Content Section Using CSS Grid</h3>
+            <h4 class="stories-group-date">June 14, 2019</h4>
+            <h3 class="stories-group-headline">On Remote Working</h3>
             <section class="stories-image flex-video">
-              <figure><img src="assets/img/full-height-content.jpg"/>
-                <figcaption><small>Photo by <a href="https://unsplash.com/photos/ipARHaxETRk" target="_blank">Kobu Agency on Unsplash</a></small></figcaption>
+              <figure><img src="assets/img/remote-working.jpg" alt="A young man in a hoodie working on his laptop and sitting on a wall overlooking a city skyline at sunset"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/Z3ownETsdNQ" target="_blank">Avi Richards on Unsplash</a></small></figcaption>
               </figure>
             </section>
             <article class="stories-group-content">
-              <p>Have you ever had a short piece of content sandwiched between a header and footer that just doesn't take up enough space to force the footer all the way to the bottom of the browser window? This happens to me all the time on redirect pages after form submissions. Here's how it looks:</p>
-              <div class="stories-image"><img src="assets/img/thank-you-page-example.jpg" alt="An example thank you page with a standard header and footer but not enough content in the middle to push the footer to the bottom of the browser window."/></div>
-              <p>What we want to do is push the footer to the bottom. We could use fixed positioning:</p>
-              <p><code><pre>footer {position: fixed; bottom: 0; width: 100%;}</pre></code></p>
-              <p>This is the look that we are going for but doing this takes the footer out of the flow of the document and could mess things up for us later on. Here's how it looks:</p>
-              <div class="stories-image"><img src="assets/img/thank-you-example-fixed.jpg" alt="Showing our thank you page with the CSS position: fixed property applied"/></div>
-              <p>We could also try: <code><pre>footer {min-height: 100vh;}</pre></code></p>
-              <p>That does the trick, but it's a little brute force for my taste. It also pushes the footer past the bottom of the browser's bottom edge. This is what it looks like:</p>
-              <div class="stories-image"><img src="assets/img/thank-you-example-min-height.jpg" alt="Showing our thank you page with the CSS min-height applied"/></div>
-              <p>Okay, now let's get to a better solution. I've found that the best way to do this is to use CSS Grid Layout. First, we apply Grid to our <code>body</code> element:</p>
-              <p><code><pre>body {display: grid; grid-template-rows: auto 1fr auto;}</pre></code></p>
-              <p>This code alone doesn't do anything, but it gives us the framework for the magic to happen. To make the content section take up all the available space, we need to add in a minimum height for the grid we just made. This will make it stretch from the top of the viewport to the bottom of the viewport even if there is not enough content. Here's the code with the <code>min-height</code> property applied to the grid:</p>
-              <p><code><pre>body {display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh;}</pre></code></p>
-              <p>Notice that we are explicitly giving values to the three rows of our grid. The first and last are <code>auto</code> which means the elements will take up whatever space they require. The middle value represents our content section. That should take up all of the remaining space. We do that with the <code>1fr</code> value. Voila! You have a relatively positioned grid that takes up all of the viewport's height at the very least. It will also continue to allow the main content section to grow if you put a lot of content in there and it pushes everything down. The <i>minimum</i> height is 100vh, so it will continue to grow as content pushes the elements down the page past the bottom of the browser window.</p>
-              <p>To center everything, just add this to the main content section:</p>
-              <p><code><pre>#content {place-self: center;}</pre></code></p>
-              <div class="stories-image"><img src="assets/img/thank-you-example-final.jpg" alt="Showing the final version of our thank you page with the centered text"/></div>
-              <p>We now have center-aligned (vertically and horizontally) content inside a main content section that pushes our footer to the bottom of the browser window and doesn't mess up the flow of the document to do it.</p>
-              <div class="stories-image"><iframe src="https://giphy.com/embed/xt3LDDCI8xV0A" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/magic-popkey-xt3LDDCI8xV0A">via GIPHY</a></p></div>
-              <p><a href="https://codepen.io/brianhaferkamp/pen/zVGVdL" target="_blank">I created a pen on CodePen</a> so you can fork this code and fiddle with it or use it in your projects.</p>
+              <p>I consider myself a remote worker. I have three days in an office and two days working remotely.</p>
+              <p>Yesterday I video conferenced with a team in India, chatted with my supervisor, completed my work, and spent the day with my wife and kids. I was productive, got paid, and was able to spend time with people I love the most (no offense to my coworkers).</p>
+              <p>Over the last two years working remotely has enabled me to:</p>
+              <ul>
+                <li>Spend a month in Europe with my family</li>
+                <li>Have more time with my family</li>
+                <li>Save money on my commute</li>
+                <li>Work while traveling in East Asia</li>
+                <li>Be a meaningful part of an organization outside my work</li>
+                <li>Have flexibility on <i>when</i> I work as well as where</li>
+              </ul>
+              <p>These are all very life-giving and I'm grateful for the flexibility my job allows. It makes me sad when I hear about situations where people are chained to a desk and a cubicle for no apparent reasons. They are not high level or in meetings constantly.</p>
+              <p>I believe that an office is largely about control, not productivity. So many corporations operate in silos that it's a farce to say that it's about productivity. I dare say that many young people are actually using technology to break down the silos whether or not they are present on site. To me, that speaks to the ability of modern communication technologies to bring people together from disparate parts of the company, not drive a wedge between them.</p>
+              <p>I've worked as a freelancer and in an agency that was mostly a distributed team (we met together once a week in an office downtown). Both of those experiences were very good for me and I enjoy the freedom that comes from remote work. I think that's really it: freedom. It's not that I'm bucking against the control of the office, it's just that I mostly don't see the point in being forced to be together with people you can't get to know (because of the silos, departments, cubicles, walls, etc.) doing work that could be done in another place.</p>
+              <p>Most of the objections to remote work revolve around not knowing if employees are really working or not. This fear is just a control mechanism to keep it all moving the way it's always been. There are so many ways to know if an employee is working or not. Foremost is the work itself. Is it getting done? Then the person is working. With phones, texting, email, video chat, IM, and more there really is no excuse not to give people the freedom to be in the place they want to be to do their work.</p>
+              <p>Remote work means there must be new processes for accountability that need to be put into place. Managers need to learn to deal with both the work and the employee. There is an amount of emotional intelligence that must be in place because one of the parties (the employee) can no longer be controlled the same. Our metrics for a successful employee need to change from time-based to quality-based. An employee might be only working 4-6 hours a day but still producing as much as someone working an 8-hour day. When you can't "see" productivity (which just means the person is at the desk working when a manager walks by) you have to gauge it a different way. The quality of the work and whether or not the employee is hitting the "normal" production levels are the metrics for success for remote workers.</p>
+              <p>Now that I've said polarizing things, I'll bring it back to the middle. Remote work is appropriate for employees doing conceptual work or digital work (designers, programmers, developers, marketers, et al.). There are still many positions that require physical presence. Sometimes conceptual positions can also benefit from physical presence, too.</p>
+              <p>How do you feel about remote work? Like it? Is it the future of all things? I'm interested to hear what you think.</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
@@ -65,9 +63,7 @@
             <header>
               <h4 class="comments-headline">Comments</h4>
               <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Full Height Content Section Using <a href="https://twitter.com/hashtag/CSSGrid?src=hash&amp;ref_src=twsrc%5Etfw">#CSSGrid</a><a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/CSSGridLayout?src=hash&amp;ref_src=twsrc%5Etfw">#CSSGridLayout</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://t.co/n3p3MDGdAm">pic.twitter.com/n3p3MDGdAm</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1139181382062825479?ref_src=twsrc%5Etfw">June 13, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
+              <div class="comment-tweet"></div>
             </header>
           </footer>
         </div>
