@@ -29,29 +29,31 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">June 18, 2019</h4>
-            <h3 class="stories-group-headline">Responsive Images for the Web</h3>
-            <section class="stories-image flex-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/supHtvOa3NE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+            <h4 class="stories-group-date">June 19, 2019</h4>
+            <h3 class="stories-group-headline">My Everyday Web Development Tools</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/tools.jpg" alt="A wall filled with small shop tools"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/NL_DF0Klepc" target="_blank">Cesar Carlevarino Aragon on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
             <article class="stories-group-content">
-              <p>In this video, I delve into responsive images for the Web. In days past we were only able to serve one image for the <code>img</code> element. However, with HTML5, we were given the <code>picture</code> element. It allows us to serve multiple images with the same HTML element and to do so at predetermined viewport widths.</p>
-              <p>The video covers:</p>
-              <ul>
-                <li>Art direction for images (how to crop images for different sizes)</li>
-                <li>Saving images for the Web (the visual quality of the image)</li>
-                <li>Writing the HTML so that different viewport sizes receive different images</li>
-              </ul>
-              <p>Here is the code on Codepen if you just want to get right to the HTML or follow along with the video.</p>
-              <div class="stories-image">
-                <div class="pen"><p class="codepen" data-height="600" data-theme-id="26191" data-default-tab="html,result" data-user="brianhaferkamp" data-slug-hash="QXEELo" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Responsive Images">
-<span>See the Pen <a href="https://codepen.io/brianhaferkamp/pen/QXEELo/">
-                  <Responsive>Images</a> by Brian Haferkamp (<a href="https://codepen.io/brianhaferkamp">@brianhaferkamp</a>)</Responsive>
-                  <on><a href="https://codepen.io">CodePen</a>.</span></on></p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                </div>
-              </div>
-              <p>Why is all of this important? It is a user-centered approach. Serving one image for all screens is not ideal because small devices are usually on data networks or Wi-Fi, which are inherently slower than Ethernet connections. Small devices also have less processing power than desktop or laptop computers. This all means users experience slower loading times and use more bandwidth (i.e., data) for no particular reason.</p>
-              <p>A really cool advantage of this technique is you get to direct how users see images at certain screen sizes. If you serve one image that looks great on a large desktop it might not look as good on a mobile phone. Some of the details will be lost because the image is shrinking to a smaller overall size. Using the technique in the pen above, you can crop an image differently for different sized devices to show the user exactly what you want them to focus on in the image.</p>
-              <p>Use this really easy technique to serve appropriate images to your users.</p>
+              <p>As web developers, we use a lot of tools. Most people with a craft do. So here are some of my favorite tools to use.</p><a href="https://www.adobe.com/products/xd.html" target="_blank">
+                <h4>Adobe XD</h4></a>
+              <p>My work team has adopted Adobe XD for all of our design work. I love its simplicity and that we can create interactive mockups that can be shared on the Web. Animations, vectors, and more make this program an amazing addition. Photoshop and Illustrator work well, but they aren't necessarily made for what we do. XD hits all the right notes for a web developer.</p><a href="https://www.faststone.org/FSViewerDetail.htm" target="_blank">
+                <h4>FastStone Image Viewer</h4></a>
+              <p>This little Windows program is an essential part of my image editing workflow. When Lightroom or Photoshop are too heavy I turn to FastStone Image Viewer to do light editing. I also use the screenshot tool all the time to grab images of whole windows or specific areas. It opens quickly and does all the little jobs perfectly.</p><a href="https://atom.io/" target="_blank">
+                <h4>Atom</h4></a>
+              <p>I've been using Atom as my code editor for years. I love that it's open source, configurable, and really lightweight. It's got all the basics plus people write plugins for specific libraries and languages. It also connects very easily to Github so you can push and pull right from Atom. Slick.</p><a href="https://github.com/brianhaferkamp/20-mile-head-start" target="_blank">
+                <h4>My Typical Stack</h4></a>
+              <p>About half of our projects at work are WordPress and the other half use my typical stack: PugJS, SASS, jQuery, BrowserSync, Gulp. It's a node-based workflow that I've added to over the years to get up and running quickly. It includes a material design icon font.</p>
+              <p>I call my build system, The 20-Mile Head Start, because if building a site were a marathon, this system is like being driven to mile 20 and then starting the race. It saves so much time in setup and all you need to get going is node.js.</p><a href="https://wordpress.org/" target="_blank">
+                <h4>WordPress</h4></a>
+              <p>When I reach for a CMS it's always WordPress. The community is so large, the resources plentiful, and PHP is easy to work with. It's a no-brainer. That said, I try to steer our projects away from a CMS unless completely necessary. There is some maintenance work that must go into WordPress so building with it means maintaining it for the long haul. That's something I try to keep in mind in recommending a stack for each project.</p><a href="https://webflow.com/" target="_blank">
+                <h4>Webflow</h4></a>
+              <p>I've just started to get into Webflow over the past year. It's not what I thought it was--in a good way. I thought it would be a Wix-type editor, but that's not the concept. Webflow is a visual text editor. That's the best way to describe it. There aren't a lot of prebuilt components out of the box that you simply drag and drop into a site. Rather, it is a visual way to write code. If you take that thought into it I think it will make more sense. It also makes it enjoyable for web developers to use who already know how to code. This is no little sweet cupcake of a website; it is a full development program. Kudos to the Webflow team.</p>
+              <p>FYI, the ease of creating relatively sophisticated JavaScript interactions has almost made me switch to it exclusively.</p>
+              <p>That's certainly not all of the tools in my toolbox. I've left out lots of good ones (for instance, <a href="http://jslint.com/" target="_blank">jslint.com</a> and these <a href="https://codepen.io/sdthornton/pen/wBZdXq" target="_blank">material design shadows</a> on <a href="https://codepen.io/" target="_blank">Codepen</a>). But these are the main tools I use on a daily basis. If they might be helpful to you, check them out and give them a try.</p>
+              <p>What are some of your favorite tools to use for web development?</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
@@ -60,9 +62,7 @@
             <header>
               <h4 class="comments-headline">Comments</h4>
               <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Responsive Images on the Web<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/Responsive?src=hash&amp;ref_src=twsrc%5Etfw">#Responsive</a> <a href="https://twitter.com/hashtag/RWD?src=hash&amp;ref_src=twsrc%5Etfw">#RWD</a> <a href="https://twitter.com/hashtag/Photography?src=hash&amp;ref_src=twsrc%5Etfw">#Photography</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://twitter.com/hashtag/HTML5?src=hash&amp;ref_src=twsrc%5Etfw">#HTML5</a> <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a> <a href="https://t.co/334AFZuizI">pic.twitter.com/334AFZuizI</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1140975785530068994?ref_src=twsrc%5Etfw">June 18, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
+              <div class="comment-tweet"></div>
             </header>
           </footer>
         </div>
