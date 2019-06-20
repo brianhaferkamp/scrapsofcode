@@ -406,6 +406,15 @@ figcaption {
   padding: 0 0 3rem;
 }
 
+#masthead .section-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .masthead-link {
   text-decoration: none;
 }
@@ -429,6 +438,14 @@ figcaption {
   font-weight: 400;
   font-size: 14.4px;
   font-size: .9rem;
+}
+
+.feed-link {
+  text-decoration: none;
+}
+
+.feed-link i {
+  margin-right: 5px;
 }
 
 .stories-group {
@@ -593,7 +610,7 @@ footer {
 @media (min-width: 1170px) {
 
   .stories-group {
-    margin-bottom: 3rem;
+    margin-bottom: 0;
   }
 
   .archive-group {
