@@ -32,19 +32,30 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">July 10, 2019</h4>
-            <h3 class="stories-group-headline">Front End Development Challenge #1</h3>
-            <section class="stories-image"><img src="assets/img/frontEndChallenge1.jpg", alt="A hero section with purple-pink background and three lines of centered text"></section>
+            <h4 class="stories-group-date">July 11, 2019</h4>
+            <h3 class="stories-group-headline">Service Workers</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/service-workers.jpg" alt="A Macbook Pro with code on the screen sitting on a white desk with a lamp to the left"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/DErxVSSQNdM" target="_blank">Artem Sapegin on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
             <article class="stories-group-content">
-              <p>Today I've cooked up a front end development challenge. <a href="https://xd.adobe.com/view/79f0941c-a52a-46db-44a3-446086d0748a-0fc1/?hints=off" target="_blank">View the design and design specs online</a>. Code this design so that it is:</p>
+              <p>A service worker is a piece of JavaScript that allows you to turn any website into a progressive web app (PWA). Here are some of the benefits:</p>
               <ul>
-                <li>Mobile responsive</li>
-                <li>Proportionately accurate</li>
-                <li>Contains no accessibility errors with <a href="https://wave.webaim.org/" target="_blank">the WAVE test</a></li>
+                <li><b>File caching.</b> One of the main benefits is that you can cache all or some of your files so that the user loads the website from the cache, not from the server. This means users can get everything on your site without having to finish an HTTP request. Instead, the request is intercepted by the service worker and redirected to get the files for the request from the browser instead. This makes your site load faster and leads to...</li>
+                <li><b>Offline browsing.</b> When your files are cached in the browser, you can offer an offline browsing experience. Outbound links will not work without network connectivity, but you can provide the same or a different experience of your website when the user loses connectivity. This is what allows apps like Gmail to provide offline functions that make it seem as though you're sending your email offline. In reality, it's being stored and is sent when the service worker (continuously checking for connectivity in the background) validates that the network is connected again. Then it sends the previously saved email. This sort of functionality is open to any website, not just the large companies.</li>
+                <li><b>Add to home screen.</b> We've always had the ability to let users add a link to their home screen to our website. But service workers enable a more native app-like experience for users who save to their home screen or desktop (yes, service workers affect desktop users, too). Users can choose to add to the home screen manually or, if they visit the site a few times, will be given a notification that asks if they want to add this site to their home screen. The idea is that they have proven they want the content and are coming back again and again. Imagine what this could do for your service business where people make appointments on your website. One click and they're right there to make another appointment. Once the user adds your app icon to the home screen, other options are also opened up to you like...</li>
+                <li><b>Push notifications.</b> I haven't explored push notifications but I know they are available with web apps. Just like native apps can send notifications when new content is available, service workers allow us to send push notifications (if they are turned on by the user) directly to the notifications drawer (usually a drop down from the top of the screen). One good use for this would be to notify users of new content on your blog. For our aforementioned service business, you could offer a notification of when the person needs a checkup or car service, for example.</li>
+                <li><b>Open without chrome.</b> Another thing that opens up when the user adds your app to their home screen is the ability to open your app without chrome. That's the fancy name for the address bar and controls of the browser. In essence your app opens looking just like a native app. This is something you can control when you make the app, but it's really powerful, especially for content providers. It means that user will have to switch apps in order to get out of your app, instead of just navigating away from your site. Also, links open inside your application and not in a new tab of the browser. You can see this when you use the Twitter Lite or Gmail apps. You never actually leave to go to a browser. This further keeps users inside your app environment.</li>
               </ul>
-              <p><i>Note: You do not have to design the bottom of the hero labeled "Design Specifics." That is just for your reference.</i></p>
-              <p>When you're finished with the code, share it with me on Twitter using the card in the comments section or go to <a href="https://twitter.com/BrianHaferkamp">@brianhaferkamp</a>.  You can also leave a link to your online code (CodePen, Github Gist, whatever) in the comments section of the XD file above so I can take a look. If you don't like any of those options, feel free to email me a link at brian@highwaywebconsulting.com with "Front End Development Challenge 1" as the subject.</p>
-              <p>To complete this challenge successfully, focus in on accessible HTML, CSS efficiency, and accuracy to the layout. Don't overthink it. This should be a layup. Show that you know the fundamentals.</p>
+              <p> It might seem like overkill to add this sort of functionality to your website but I'll leave you with one more thing. Google likes progressive web apps. Google rewards the use of service workers. Now that Google is ranking based on your mobile version, this is a way to further set apart your business or your clients. You can learn it in less than a week.</p>
+              <p>I created <a href="https://skmmr.news" target="_blank">my news app, skmmr</a>, as a PWA. To see some of the functionality I listed above, go to the site and add it to your home screen through the browser's menu. Then open it up using the icon on your phone. You'll see a splash screen and then the app opens into a native app-like interface. Combined with an intentionally app-like UI it looks and feels like a native app but it's really just a supercharged website. Like I said, this is a big win for content sites, especially.</p>
+              <p>To get started with progressive web apps and service workers, check out these excellent resources:</p>
+              <ul>
+                <li><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">Google's progressive web apps page</a></li>
+                <li><a href="https://youtu.be/ksXwaWHCW6k" target="_blank">Brad Traversy video on service workers</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">Service worker API on Mozilla Developer Network</a></li>
+              </ul>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
@@ -53,9 +64,7 @@
             <header>
               <h4 class="comments-headline">Comments</h4>
               <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Front End Development Challenge #1<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/AdobeXD?ref_src=twsrc%5Etfw">@AdobeXD</a> <a href="https://twitter.com/hashtag/FrontEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEnd</a> <a href="https://t.co/e6PsCsVH9i">pic.twitter.com/e6PsCsVH9i</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1148940058180894720?ref_src=twsrc%5Etfw">July 10, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
+              <div class="comment-tweet"></div>
             </header>
           </footer>
         </div>
