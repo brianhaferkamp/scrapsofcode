@@ -32,30 +32,253 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">July 11, 2019</h4>
-            <h3 class="stories-group-headline">Service Workers</h3>
-            <section class="stories-image">
-              <figure><img src="assets/img/service-workers.jpg" alt="A Macbook Pro with code on the screen sitting on a white desk with a lamp to the left"/>
-                <figcaption><small>Photo by <a href="https://unsplash.com/photos/DErxVSSQNdM" target="_blank">Artem Sapegin on Unsplash</a></small></figcaption>
-              </figure>
-            </section>
+            <h4 class="stories-group-date">July 12, 2019</h4>
+            <h3 class="stories-group-headline">Adding a Service Worker to Your Web Site</h3>
+            <section class="stories-image"><img src="assets/img/no-connection.png" alt="A blue circle with a Wi-Fi signal and a line crossed through it representing no network connection"/></section>
             <article class="stories-group-content">
-              <p>A service worker is a piece of JavaScript that allows you to turn any website into a progressive web app (PWA). Here are some of the benefits:</p>
-              <ul>
-                <li><b>File caching.</b> One of the main benefits is that you can cache all or some of your files so that the user loads the website from the cache, not from the server. This means users can get everything on your site without having to finish an HTTP request. Instead, the request is intercepted by the service worker and redirected to get the files for the request from the browser instead. This makes your site load faster and leads to...</li>
-                <li><b>Offline browsing.</b> When your files are cached in the browser, you can offer an offline browsing experience. Outbound links will not work without network connectivity, but you can provide the same or a different experience of your website when the user loses connectivity. This is what allows apps like Gmail to provide offline functions that make it seem as though you're sending your email offline. In reality, it's being stored and is sent when the service worker (continuously checking for connectivity in the background) validates that the network is connected again. Then it sends the previously saved email. This sort of functionality is open to any website, not just the large companies.</li>
-                <li><b>Add to home screen.</b> We've always had the ability to let users add a link to their home screen to our website. But service workers enable a more native app-like experience for users who save to their home screen or desktop (yes, service workers affect desktop users, too). Users can choose to add to the home screen manually or, if they visit the site a few times, will be given a notification that asks if they want to add this site to their home screen. The idea is that they have proven they want the content and are coming back again and again. Imagine what this could do for your service business where people make appointments on your website. One click and they're right there to make another appointment. Once the user adds your app icon to the home screen, other options are also opened up to you like...</li>
-                <li><b>Push notifications.</b> I haven't explored push notifications but I know they are available with web apps. Just like native apps can send notifications when new content is available, service workers allow us to send push notifications (if they are turned on by the user) directly to the notifications drawer (usually a drop down from the top of the screen). One good use for this would be to notify users of new content on your blog. For our aforementioned service business, you could offer a notification of when the person needs a checkup or car service, for example.</li>
-                <li><b>Open without chrome.</b> Another thing that opens up when the user adds your app to their home screen is the ability to open your app without chrome. That's the fancy name for the address bar and controls of the browser. In essence your app opens looking just like a native app. This is something you can control when you make the app, but it's really powerful, especially for content providers. It means that user will have to switch apps in order to get out of your app, instead of just navigating away from your site. Also, links open inside your application and not in a new tab of the browser. You can see this when you use the Twitter Lite or Gmail apps. You never actually leave to go to a browser. This further keeps users inside your app environment.</li>
-              </ul>
-              <p> It might seem like overkill to add this sort of functionality to your website but I'll leave you with one more thing. Google likes progressive web apps. Google rewards the use of service workers. Now that Google is ranking based on your mobile version, this is a way to further set apart your business or your clients. You can learn it in less than a week.</p>
-              <p>I created <a href="https://skmmr.news" target="_blank">my news app, skmmr</a>, as a PWA. To see some of the functionality I listed above, go to the site and add it to your home screen through the browser's menu. Then open it up using the icon on your phone. You'll see a splash screen and then the app opens into a native app-like interface. Combined with an intentionally app-like UI it looks and feels like a native app but it's really just a supercharged website. Like I said, this is a big win for content sites, especially.</p>
-              <p>To get started with progressive web apps and service workers, check out these excellent resources:</p>
-              <ul>
-                <li><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">Google's progressive web apps page</a></li>
-                <li><a href="https://youtu.be/ksXwaWHCW6k" target="_blank">Brad Traversy video on service workers</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" target="_blank">Service worker API on Mozilla Developer Network</a></li>
-              </ul>
+              <p>Yesterday I talked up the benefits of using service workers for your website. Today I'm going to show you how to add a service worker to your website.</p>
+              <p>The first step is to set up a new JavaScript file. Most people name it <code>sw.js</code> or <code>service-worker.js</code>. You want to put this in the root of your project (the same level as your <code>index.html</code> file).</p>
+              <p>Next, you need to add the following code to the top of your main JavaScript file:</p>
+              <p>
+                <pre><code>// Check the browser to make sure it supports service workers
+
+if('serviceWorker' in navigator) {
+navigator.serviceWorker
+
+  // Register the path to the service worker file
+  .register('./sw.js')
+
+  .then(function() { console.log("Service Worker Registered"); });
+}
+</code></pre>
+              </p>
+              <p>This is taken from Google's Service workers fundamentals page, so you can read more about what the code is doing there. For now, just know that this checks to see if the browser supports service workers and then registers your service worker file (sw.js) once the page loads. If the service worker registration is successful, it is logged to the console. Any errors are also logged to the console.</p>
+              <p>Now that our main JavaScript file is registering our service worker code, let's turn our attention to our service worker file. The first thing we need to do is set up our cache and all the files we want to cache. Add this code to the top of your sw.js file:</p>
+              <p>
+                <pre><code>//-----------------------------------------
+// Service Worker
+//
+// * Offline first
+// * Clears old cache on version change
+//
+//-----------------------------------------
+
+// Init cache name/version
+const cacheName = 'v1';
+
+// which pages/assets do you want to cache?
+const cacheAssets = [
+
+  'index.html',
+  'assets/css/main.css',
+  'assets/js/app.js'
+
+]
+</code></pre>
+              </p>
+              <p>The first thing we need to do is set up our the name of our cache. This will allow us to update the cache when we make changes to the cached files. Second, we set up an array that holds all of our cached files. You'll set all of the assets you want to cache. There are only files here in this example, but you can also cache images. Just put the path to each image you want to cache.</p>
+              <p>The next piece of code we need to add to sw.js is the code that installs the service worker. Add this code after our cache setup:</p>
+              <p>
+                <pre><code>// Install service worker
+
+self.addEventListener('install', (e) => {
+
+  console.log('Service Worker: Installed');
+
+  e.waitUntil(
+    caches
+      .open(cacheName)
+      .then(cache => {
+        console.log('Service Worker: Caching Files');
+        cache.addAll(cacheAssets);
+      })
+
+      .then(() => self.skipWaiting())
+  );
+});
+</code></pre>
+              </p>
+              <p>There are several parts to the <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle" target="_blank">service worker life cycle</a>. This boilerplate code includes three, specifically: Install, Activate, and Fetch.</p>
+              <p>The code above installs the service worker the first time the user visits the site. What does installation mean? It means the service worker is installed in the browser and starts working. In the code above, a new cache is opened with the <code>cacheName</code> variable we set at the top of the file. After the cache is opened, we add all of our files in the <code>cacheFiles</code> array to the opened cache.</p>
+              <p>Activating the service worker is our next step. We add the following code after the install event:</p>
+              <p>
+                <pre><code>// Activate the service worker
+
+self.addEventListener('activate', (e) => {
+  console.log('Service Worker: Activated');
+
+  // Remove old caches
+  e.waitUntil(
+
+    caches.keys().then(cacheNames => {
+
+      return Promise.all(
+
+        // look at all the cacheNames
+        cacheNames.map(cache => {
+
+          // if the current cache !== cacheName then delete it
+          if (cache !== cacheName) {
+            console.log('Service Worker: Clearing Old Cache');
+            return caches.delete(cache);
+          }
+        })
+      )
+    })
+  );
+
+});
+</code></pre>
+              </p>
+              <p>Once the service worker is activated, it will make sure that the cache is updated. It loops through all the cache names to see if the <code>cacheName</code> variable is equal to the variable at the top of the service worker file. If it is not then it will be deleted. This keeps the cached files updated when the user visits the site.</p>
+              <p>The last piece of code is the Fetch event. This is what happens when the user requests a URL. Put this code after the activation code in your service worker file:</p>
+              <p>
+                <pre><code>// listen for fetch event (HTTP request)
+
+self.addEventListener('fetch', (e) => {
+  console.log('Service Worker: Fetching');
+
+  // Offline as backup
+  // e.respondWith(
+  //   // if the user is online, perform a regular HTTP request
+  //   fetch(e.request)
+  //   // if the HTTP request fails (offline) then serve the assets requested from the cache
+  //   .catch(() => caches.match(e.request))
+  // )
+
+
+  // Offline first (preferred)
+
+  e.respondWith(
+
+    // are the files requested in the cache already?
+    caches.match(e.request).then(cachedResponse => {
+
+      // if yes, then serve files from cache
+      if (cachedResponse) {
+        console.log('Found in cache!');
+        return cachedResponse;
+      }
+
+      // else do an HTTP request to the server
+      return fetch(e.request);
+    })
+  )
+});
+</code></pre>
+              </p>
+              <p>It is important to note that you have some patterns to work with. The pattern above sets up the service worker to intercept the browser's HTTP request (that would normally go to the server) with the service worker. It checks to see if the files being requested are already in the cache. If they are then the files are served to the browser from the cached files, not from the server. If there are files not in the cache, then the request goes to the server to get those files. This pattern is considered offline first because you do not need a network connection once the files are cached. If your entire site is cached, the user should still be able to browse the content without a network connection.</p>
+              <p>You can see that there is also an offline as backup pattern. The HTTP request is made normally but if the user is offline or loses connectivity, you can serve an offline version of the website from the files in your cache. This allows users to have fresh content but fallback to predetermined content if the network fails. Google suggests using the offline model. There is also a pattern that allows you to grow the cache based on requests that are not found in the cache when the user makes a fetch request.</p>
+              <p>The rabbit hole for service workers goes pretty deep but the code above will get you an offline first site where the user won't be able to tell any difference if they lose connectivity or have a poor connection. That is ultimately the goal with adding service workers to your site.</p>
+              <p>Here is the full boilerplate code:</p>
+              <p>
+                <pre><code>//-----------------------------------------
+// Service Worker
+//
+// * Offline first
+// * Clears old cache on version change
+//
+//-----------------------------------------
+
+
+//-----------------------------------------
+// Init Cache
+//-----------------------------------------
+
+// Set cache name/version
+const cacheName = 'v1';
+
+// which pages/assets do you want to cache?
+const cacheAssets = [
+'index.html',
+'assets/css/main.css',
+'assets/js/app.js',
+]
+
+
+//-----------------------------------------
+// Install service worker
+//-----------------------------------------
+
+self.addEventListener('install', (e) => {
+  console.log('Service Worker: Installed');
+  e.waitUntil(
+    caches
+      .open(cacheName)
+      .then(cache => {
+        console.log('Service Worker: Caching Files');
+        cache.addAll(cacheAssets);
+      })
+      .then(() => self.skipWaiting())
+  );
+});
+
+
+//-----------------------------------------
+// Activate service worker (clear old cache)
+//-----------------------------------------
+
+self.addEventListener('activate', (e) => {
+  console.log('Service Worker: Activated');
+
+  // Remove old caches
+  e.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        // look at all the cacheNames
+        cacheNames.map(cache => {
+          // if the current cache !== cacheName then delete it
+          if (cache !== cacheName) {
+            console.log('Service Worker: Clearing Old Cache');
+            return caches.delete(cache);
+          }
+        })
+      )
+    })
+  );
+
+});
+
+
+//-----------------------------------------
+// Listen for fetch event (HTTP request)
+//-----------------------------------------
+
+self.addEventListener('fetch', (e) => {
+  console.log('Service Worker: Fetching');
+
+  //-----------------------------------------
+  // Offline as backup
+  // e.respondWith(
+  //   // if the user is online, perform a regular HTTP request
+  //   fetch(e.request)
+  //   // if the HTTP request fails (offline) then serve the assets requested from the cache
+  //   .catch(() => caches.match(e.request))
+  // )
+
+  //-----------------------------------------
+  // Offline first
+  e.respondWith(
+    // are the files requested in the cache already?
+    caches.match(e.request).then(cachedResponse => {
+      // if yes, then serve files from cache
+      if (cachedResponse) {
+        console.log('Found in cache!');
+        return cachedResponse;
+      }
+      // else do an HTTP request to the server
+      return fetch(e.request);
+    })
+  )
+});
+</code></pre>
+              </p>
+              <p>Once you do all of the steps to add this to your code, your service worker should be up and running. Open your browser's dev tools, navigate to the "Application" tab and then select "Service Workers." If you installed the service worker correctly, this tab should show you the file name of your service worker, that it has been activated, and is currently running. It should look like the following:</p>
+              <div class="stories-image"><img src="assets/img/service-worker-running.jpg"/></div>
+              <p>To check your cached files, click on the arrow next to "Cache Storage" and then click on your cache. It should have the name you put into the <code>cacheName</code> variable at the top of your service worker file. You should be able to see all of the files that are in your <code>cacheAssets</code> array. Something like this:</p>
+              <div class="stories-image"><img src="assets/img/service-worker-cache.jpg"/></div>
+              <p>To check offline capability, check the "Offline" box and reload the page. You should see your site still served even if you are offline. Note that anything that requires a network connection to work (social media, YouTube, etc.) will not work in offline mode.</p>
+              <p>And that's it! You now know how to build a basic service worker and create an offline experience for your users. Applying an offline first strategy for your site will also speed it up since the files requested are not coming all the way from the server. You should notice a big reduction in page load times&mdash;even if you only cache your home page, CSS, and JavaScript files.</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
@@ -64,9 +287,7 @@
             <header>
               <h4 class="comments-headline">Comments</h4>
               <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Service Workers<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/PWA?src=hash&amp;ref_src=twsrc%5Etfw">#PWA</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash&amp;ref_src=twsrc%5Etfw">#JavaScript</a> <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/App?src=hash&amp;ref_src=twsrc%5Etfw">#App</a> <a href="https://twitter.com/hashtag/WebApp?src=hash&amp;ref_src=twsrc%5Etfw">#WebApp</a> <a href="https://twitter.com/hashtag/Mobile?src=hash&amp;ref_src=twsrc%5Etfw">#Mobile</a> <a href="https://t.co/nkSvyQG1AJ">pic.twitter.com/nkSvyQG1AJ</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1149306461966819329?ref_src=twsrc%5Etfw">July 11, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
+              <div class="comment-tweet"></div>
             </header>
           </footer>
         </div>
