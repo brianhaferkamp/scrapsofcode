@@ -348,6 +348,20 @@ hr {
   height: 0;
 }
 
+pre,
+code {
+  background-color: #eee;
+}
+
+pre {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
+  padding: 8px;
+  padding: .5rem;
+}
+
 img {
   width: 100%;
 }
