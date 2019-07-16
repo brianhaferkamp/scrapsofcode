@@ -31,6 +31,74 @@
             <h3 class="page-headline">Post Archive</h3>
           </header>
           <div class="stories-group">
+            <h4 class="stories-group-date">July 15, 2019</h4>
+            <h3 class="stories-group-headline">Creating a Web App Manifest</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/manifest-chill.jpg" alt="A white jar candle with the words, Manifest and Chill, sitting on top of an open book and blanket"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/RdlBK-0XOxk">Paige Cody on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
+            <article class="stories-group-content">
+              <p>Last week I posted how to add a service worker to your website. The service worker is the first piece of turning your website into a progressive web app (PWA). The second piece is to have a manifest installed in the root folder of your project (the same place your service worker file is located).</p>
+              <p><a href="https://developers.google.com/web/fundamentals/web-app-manifest/" target="_blank">What is the manifest?</a> It is a JSON file that tells the browser about your web app. You should save the following code in a file called <code>manifest.json</code> and put the file in the root of your website project:</p>
+              <p>
+                <pre><code>{
+  "short_name": "Name",
+  "name": "Longer Name Here",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}
+</code></pre>
+              </p>
+              <p>Next, you need to let the web page know where the file is and link to it. You simply add this link tag to the head of each page in your app:</p>
+              <p><code>&lt;link rel="manifest" href="/manifest.json"&gt;</code></p>
+              <p>Now that you have the basic framework, let's walk through each piece.</p>
+              <p>The first part of the manifest are the <code>name</code> and <code>short_name</code>. You must provide one of these. If both are used then the short name is used on the home screen when the user adds your website to the home screen. It's also used in the launcher or wherever there is limited space. The longer name is used for the install prompt, if this functionality is included.</p>
+              <p>The second piece of the manifest is the icons. These are the icons that are used when the user adds your app to the home screen and for the launcher/splash page. Include a large and small icon here&mdash;one at 192px and one at 512px.</p>
+              <p>The <code>start_url</code> is the URL you want the user to go to when they open your app from the home screen. Often it will be the home page of your site, but maybe you have a special start screen for app users. You can append a query string to the URL so you can track how many people are engaging your site via the home screen as opposed to just typing in the web address in the browser. In our example above, the query string is <code>?source=pwa</code>. You can make this whatever makes sense to you.</p>
+              <p>When your app is first launched from the home screen, there is a splash screen that is shown to the user. The splash screen has your icon and a background color. The <code>background_color</code> key in your manifest controls the background color of the splash screen.</p>
+              <p>There are multiple display modes that you can choose for your app. The <code>display</code> key controls which one you want app users to see. The options are:</p>
+              <ul>
+                <li><code>fullscreen</code>. The user opens the app without any browser controls. It looks and behaves like a native app. Be aware that you are full in control of the user's experience, so your app must have an appropriate and thoughtful UI.</li>
+                <li><code>standalone</code>. Similar to fullscreen mode but the app is not opened in the browser. In this mode it is most like a native app. If you want to show the Add to Home Screen prompt, the app must be set to standalone.</li>
+                <li><code>minimal-ui</code>. Similar to fullscreen mode but it does include some minimal browser controls for navigation. This is only supported in Chrome mobile.</li>
+                <li><code>browser</code>. Opens your app in a standard browser.</li>
+              </ul>
+              <p>The <code>scope</code> determines how links are opened in your app. Any links opened inside your app will not be opened in a new tab. You can force a new tab by using <code>&lt;target="_blank"&gt;</code> in your <code>&lt;a&gt;</code> tags. If you don't include a scope, it is implied that the scope is the directory you are serving your web app from.</p>
+              <p>The theme color sets the tool bar above the app. This is where your notifications, time, network connectivity, etc. are located. You can make that any color you wish. You also need to add this meta theme color to the head of your page:</p>
+              <p><code>&lt;meta name="theme-color" content="#4285f4"&gt;</code></p>
+              <p>Once you've filled in the boilerplate information, you can check to see that your manifest is loaded properly by going to your website and opening the dev tools. Click on the "Applications" tab then select "Manifest." It should show you all of your app's properties. Here is the app manifest for skmmr, my news web app:</p>
+              <div class="stories-image"><img src="assets/img/skmmr-manifest.jpg" alt="The web app manifest for skmmr.news"/></div>
+              <p>That's it! Mostly. There are actually some more properties you can add to the <code>manifest.json</code> file. You'll find a <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank">full reference for the Web App Manifest at Mozilla Developer Network</a>.</p>
+              <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
+            </article>
+          </div>
+          <!-- Comments-->
+          <footer class="comments">
+            <header>
+              <h4 class="comments-headline">Comments</h4>
+              <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
+              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Creating a Web App Manifest<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebApp?src=hash&amp;ref_src=twsrc%5Etfw">#WebApp</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/Code?src=hash&amp;ref_src=twsrc%5Etfw">#Code</a> <a href="https://twitter.com/hashtag/JSON?src=hash&amp;ref_src=twsrc%5Etfw">#JSON</a> <a href="https://t.co/6zjWnxdp2j">pic.twitter.com/6zjWnxdp2j</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1150752527954128901?ref_src=twsrc%5Etfw">July 15, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </header>
+          </footer>
+          <div class="stories-group">
             <h4 class="stories-group-date">July 12, 2019</h4>
             <h3 class="stories-group-headline">Adding a Service Worker to Your Web Site</h3>
             <section class="stories-image"><img src="assets/img/no-connection.png" alt="A blue circle with a Wi-Fi signal and a line crossed through it representing no network connection"/></section>
