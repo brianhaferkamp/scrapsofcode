@@ -31,6 +31,36 @@
             <h3 class="page-headline">Post Archive</h3>
           </header>
           <div class="stories-group">
+            <h4 class="stories-group-date">July 16, 2019</h4>
+            <h3 class="stories-group-headline">Auditing Your Web App with Lighthouse</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/lighthouse.jpg" alt="A white jar candle with the words, Manifest and Chill, sitting on top of an open book and blanket"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/nsskWw0227Y">Vidar Nordli-Mathisen on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
+            <article class="stories-group-content">
+              <p>Over the past two posts, we've turned a regular ol' website into a flashy web app. It is capable of offline browsing and being added to the home screen and opened like a native app. This is pretty exciting stuff.</p>
+              <p>Today I want to share with you how you can test your app using Google's Lighthouse auditing engine. Lighthouse is now being used on the Google PageSpeed test page, too, so it's something you will need to become familiar with if you are concerned about performance and loading times.</p>
+              <p>To get to the Lighthouse audit tool, open Chrome's dev tools and click on "Audit." You should see something like this:</p>
+              <div class="stories-image"><img src="assets/img/skmmr-lighthouse.jpg" alt="A screenshot showing the Lighthouse audit tool in Google Chrome"/></div>
+              <p>There are several options to choose. For the first audit, you should just stick with the defaults. One thing you might want to fiddle with over time is how your site loads over a 3G connection and with no throttling. If you're on a business connection or really fast connection you'll probably notice a difference in load times compared to the 3G connection. The reason Google chooses this as a default is that a lot of the world is accessing the Web over a slower connection than most people in richer countries have access to. If your site loads fast for slower connections you should be golden everywhere.</p>
+              <p>When you click on the audit button it takes a moment to get your audit back (~30seconds). This is what an audit with the default settings looks like. I'm using skmmr.news as my app to test:</p>
+              <div class="stories-image"><img src="assets/img/skmmr-lighthouse-audit.jpg" alt="A screenshot showing the Lighthouse audit tool in Google Chrome after auditing skmmr.news, a web app"/></div>
+              <p>There are several things that Lighthouse checks so go through them and see what Google suggests. Some of them you'll have control over, others you wont. Try to focus on getting the PWA badge. That means you have the manifest property filled out and the service worker is doing its job properly. If not, follow the prompts under each heading. There are links to articles from the Google Developers site if you don't know what the suggestions mean.</p>
+              <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
+            </article>
+          </div>
+          <!-- Comments-->
+          <footer class="comments">
+            <header>
+              <h4 class="comments-headline">Comments</h4>
+              <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
+              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Auditing Your Web App with Lighthouse<a href="https://t.co/C3sC4wm5Kw">https://t.co/C3sC4wm5Kw</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/WebApp?src=hash&amp;ref_src=twsrc%5Etfw">#WebApp</a> <a href="https://twitter.com/hashtag/Google?src=hash&amp;ref_src=twsrc%5Etfw">#Google</a> <a href="https://twitter.com/hashtag/Lighthouse?src=hash&amp;ref_src=twsrc%5Etfw">#Lighthouse</a> <a href="https://twitter.com/googledevs?ref_src=twsrc%5Etfw">@googledevs</a> <a href="https://twitter.com/Google?ref_src=twsrc%5Etfw">@google</a> <a href="https://twitter.com/hashtag/performance?src=hash&amp;ref_src=twsrc%5Etfw">#performance</a> <a href="https://t.co/Ecq5BpiuEF">pic.twitter.com/Ecq5BpiuEF</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1151133646440374272?ref_src=twsrc%5Etfw">July 16, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </header>
+          </footer>
+          <div class="stories-group">
             <h4 class="stories-group-date">July 15, 2019</h4>
             <h3 class="stories-group-headline">Creating a Web App Manifest</h3>
             <section class="stories-image">
