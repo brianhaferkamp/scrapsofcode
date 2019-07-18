@@ -32,58 +32,20 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">July 17, 2019</h4>
-            <h3 class="stories-group-headline">Easy Centering with CSS Grid</h3>
+            <h4 class="stories-group-date">July 18, 2019</h4>
+            <h3 class="stories-group-headline">A Note on Source Order</h3>
             <section class="stories-image">
-              <figure><img src="assets/img/center-css-grid.jpg" alt="A young man in a hoody squats in the middle of the frame between the up and down sides of an escalator"/>
-                <figcaption><small>Photo by <a href="https://unsplash.com/photos/xTXHcmg9cj0" target="_blank">Guillaume Bolduc on Unsplash</a></small></figcaption>
+              <figure><img src="assets/img/source-order.jpg" alt="A sign that says, &quot;Order&quot; with two arrows pointing downward"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/1SjD5ZEiUsA" target="_blank">Micheile Henderson on Unsplash</a></small></figcaption>
               </figure>
             </section>
             <article class="stories-group-content">
-              <p>Centering in CSS used to be a pretty painful situation. It still can be if you have to center absolutely positioned elements (but it really doesn't have to be). However, we now have more tools than ever to center relatively positioned elements perfectly in a responsive environment. I will show you how to center text over an image using CSS Grid Layout with a Flexbox fallback.</p>
-              <p>This HTML code is pretty typical of a hero or feature element that I work with daily:</p>
-              <p>
-                <pre><code>&lt;header class="hero"&gt;
-  &lt;div class="hero-text"&gt;
-    &lt;h1&gt;Some Hero Text Here&lt;/h1&gt;
-    &lt;h2&gt;Some hero subtext goes here and is a little longer&lt;/h2&gt;
-    &lt;button&gt;Hero Button&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/header&gt;
-</code></pre>
-              </p>
-              <p>There is a <code>.hero</code> element with a background image and text overlay. This example has a button.</p>
-              <p>We're going to use CSS Grid Layout to center these items and also provide a CSS Flexbox fallback on the off chance that a user is using an older browser that doesn't support CSS Grid Layout. At this point we're at over 90% of all browsers providing unprefixed support of Grid (<a href="https://caniuse.com/#feat=css-grid" target="_blank">according to caniuse.com</a>). Until that gets to 100% it's wise to provide some sort of Flexbox fallback&mdash;which <a href="https://caniuse.com/#feat=flexbox" target="_blank">every major browser supports</a> (even IE11).</p>
-              <p>I did set some base styles for our HTML above. I won't go into them here, but you can see them in the <a href="https://codepen.io/brianhaferkamp/pen/zgOEjv" target="_blank">Codepen I created</a>. Let's focus in on the Flexbox and Grid code.</p>
-              <p>Before we move on, an important concept for both Flexbox and Grid is that currently they only support parent-child relationships. Setting a parent to <code>display: flex</code> or <code>display: grid</code> only affects the child elements of that container, not the grandchildren. So in our example above I have added an extra <code>&lt;div&gt;</code> with the class <code>hero-text</code>. This groups our text elements together and allows us to center them as one block. It becomes the child which will be acted upon by the <code>.hero</code> element.</p>
-              <p>First, let's set up the fallback code. This is how we could easily center using Flexbox:</p>
-              <p>
-                <pre><code>.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</code></pre>
-              </p>
-              <p>This sets <code>.hero</code> to use Flexbox and then centers horizontally (<code>justify-content</code>) and vertically (<code>align-items</code>). Most browsers will read this code and not have any problems centering it.</p>
-              <p>With our fallback in place, we can scroll to the bottom of our CSS file and add our CSS Grid centering. This is done with a feature query, which uses the <code>@supports</code> query. Here is what that code looks like:</p>
-              <p>
-                <pre><code>@supports (display: grid) {
-  .hero {
-    display: grid;
-  }
-
-  .hero-text {
-    place-self: center;
-  }
-}
-</code></pre>
-              </p>
-              <p>Whatever code we put into the <code>@supports</code> query will be read and used by browsers that support whatever feature we define. This is a way to do progressive enhancement for new CSS features. So in this code we are checking to see if the browser supports <code>display: grid</code>.</p>
-              <p>So we set our <code>.hero</code> element to <code>display: grid</code>, which makes our <code>.hero-text</code> element a child of the grid. We have access to a property for CSS Grid children called <code>place-self</code>. Calling <code>place-self</code> is a short-hand that sets both the horizontal and vertical alignment of the child item&mdash;not the elements inside the child, but the child itself. So we give that a value of <code>center</code>. This is the same as saying <code>place-self: center center</code>. It centers the element vertically centered (first value) and horizontally centered (second value) in its grid cell. You can <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#prop-place-self" target="_blank">learn more about <code>place-self</code> from this go-to resource at CSS-Tricks</a>.</p>
-              <p>So now we've created easy centering with a fallback in less than 10 lines of code. It's not that difficult to get beautifully centered elements that you can also change using media queries for responsive design. You could play around with how this text reacts at different sizes.</p>
-              <p><b>Pro Tip:</b> If your text isn't reacting the way if should with the Grid changes try commenting out the Flexbox code to see if that makes it work. Also, any styles applied to the child elements outside the feature query cascade down, so if you want an element to have different styles for Grid, you must override them in the <code>@supports</code> call.</p>
-              <p>Happy Centering!</p>
+              <p>There are some really fun parts of web development. HTML tends to not be one of those parts. But as the skeleton of the Web it is generally all that the non-humans see when they look at a web page.</p>
+              <p>Source order is the order of the elements in the code. Whatever you write in the HTML is the source order of the page. A bot or screen reader will access your code this way and read top-to-bottom, left-to-right.</p>
+              <p>With the advent of Flexbox and CSS Grid, we have the ability to change the visual order (what the user sees on the page) without changing the source order. It was not that way 20 years ago. Doing this, however, really messes with the ability for users to use the keyboard to navigate, causing accessibility issues. I'm not going to get into the <code>tabindex</code> attribute in HTML, but you can read about the importance of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank">source order for tabbing through a web page at MDN</a>.</p>
+              <p>Designers rarely have to think about accessibility. A good designer will understand whether their text and color contrast meets accessibility requirements or not, but many accessibility concerns fall into the laps of developers. Devs are directly responsible for how the HTML is output on the page. They are responsible for making the page easier for bots to read. They are responsible for writing semantic, legible code.</p>
+              <p>My best advice when you get a design is to reproduce the design in a way that makes sense if the content were read out loud. Take a card layout, for example. What is the hierarchy of the card content from most important to least important? In that case the order should be headline, description, photo, and then link. That is the best way to present the card in the HTML. However, visually it is more standard to present the photo first then the headline, description, and link. This is how we process information visually. In this case I would write the code so that a screen reader would present the most important information first. The photo is not as important and can be pushed down in the source code. We can always bring it back up in the visual order through CSS.</p>
+              <p>This is just a small example but shows how we need to be careful to order our HTML well so that the page can be easily understood and that it makes sense to users who are not accessing the page visually (which includes bots). Something to think about the next time you get a design and begin processing how that should be translated to code.</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
@@ -92,9 +54,7 @@
             <header>
               <h4 class="comments-headline">Comments</h4>
               <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Easy Centering with <a href="https://twitter.com/hashtag/CSSGrid?src=hash&amp;ref_src=twsrc%5Etfw">#CSSGrid</a><a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/FrontEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEnd</a> <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/Code?src=hash&amp;ref_src=twsrc%5Etfw">#Code</a> <a href="https://twitter.com/hashtag/Flexbox?src=hash&amp;ref_src=twsrc%5Etfw">#Flexbox</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://t.co/JUf3Ut5s03">pic.twitter.com/JUf3Ut5s03</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1151484988409487360?ref_src=twsrc%5Etfw">July 17, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div>
+              <div class="comment-tweet"></div>
             </header>
           </footer>
         </div>
