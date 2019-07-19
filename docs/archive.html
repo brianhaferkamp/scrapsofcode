@@ -31,6 +31,32 @@
             <h3 class="page-headline">Post Archive</h3>
           </header>
           <div class="stories-group">
+            <h4 class="stories-group-date">July 18, 2019</h4>
+            <h3 class="stories-group-headline">A Note on Source Order</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/source-order.jpg" alt="A sign that says, &quot;Order&quot; with two arrows pointing downward"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/1SjD5ZEiUsA" target="_blank">Micheile Henderson on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
+            <article class="stories-group-content">
+              <p>There are some really fun parts of web development. HTML tends to not be one of those parts. But as the skeleton of the Web it is generally all that the non-humans see when they look at a web page.</p>
+              <p>Source order is the order of the elements in the code. Whatever you write in the HTML is the source order of the page. A bot or screen reader will access your code this way and read top-to-bottom, left-to-right.</p>
+              <p>With the advent of Flexbox and CSS Grid, we have the ability to change the visual order (what the user sees on the page) without changing the source order. It was not that way 20 years ago. Doing this, however, really messes with the ability for users to use the keyboard to navigate, causing accessibility issues. I'm not going to get into the <code>tabindex</code> attribute in HTML, but you can read about the importance of <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank">source order for tabbing through a web page at MDN</a>.</p>
+              <p>Designers rarely have to think about accessibility. A good designer will understand whether their text and color contrast meets accessibility requirements or not, but many accessibility concerns fall into the laps of developers. Devs are directly responsible for how the HTML is output on the page. They are responsible for making the page easier for bots to read. They are responsible for writing semantic, legible code.</p>
+              <p>My best advice when you get a design is to reproduce the design in a way that makes sense if the content were read out loud. Take a card layout, for example. What is the hierarchy of the card content from most important to least important? In that case the order should be headline, description, photo, and then link. That is the best way to present the card in the HTML. However, visually it is more standard to present the photo first then the headline, description, and link. This is how we process information visually. In this case I would write the code so that a screen reader would present the most important information first. The photo is not as important and can be pushed down in the source code. We can always bring it back up in the visual order through CSS.</p>
+              <p>This is just a small example but shows how we need to be careful to order our HTML well so that the page can be easily understood and that it makes sense to users who are not accessing the page visually (which includes bots). Something to think about the next time you get a design and begin processing how that should be translated to code.</p>
+              <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
+            </article>
+          </div>
+          <!-- Comments-->
+          <footer class="comments">
+            <header>
+              <h4 class="comments-headline">Comments</h4>
+              <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
+              <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>A Note on Source Order<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/FrontEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEnd</a> <a href="https://twitter.com/hashtag/FrontEndDeveloper?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEndDeveloper</a> <a href="https://t.co/GjG7qxlBFB">pic.twitter.com/GjG7qxlBFB</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1151836274422157317?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+            </header>
+          </footer>
+          <div class="stories-group">
             <h4 class="stories-group-date">July 17, 2019</h4>
             <h3 class="stories-group-headline">Easy Centering with CSS Grid</h3>
             <section class="stories-image">
