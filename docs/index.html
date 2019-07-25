@@ -32,29 +32,36 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">July 24, 2019</h4>
-            <h3 class="stories-group-headline">Love and Hate</h3>
+            <h4 class="stories-group-date">July 25, 2019</h4>
+            <h3 class="stories-group-headline">A Note on Build Systems</h3>
             <section class="stories-image">
-              <figure><img src="assets/img/love-hate.jpg" alt="A snow-covered mountain in black and white"/>
-                <figcaption><small>Photo by <a href="https://unsplash.com/photos/fNClQ4pRlaECaspar" target="_blank">Camille Rubin on Unsplash</a></small></figcaption>
+              <figure><img src="assets/img/build-system.jpg" alt="An Amish barn raising with lots of men in blue shirts working on the building"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/ymf4_9Y9S_A" target="_blank">Randy Fath on Unsplash</a></small></figcaption>
               </figure>
             </section>
             <article class="stories-group-content">
-              <p>I have a real love/hate relationship with the Web.</p>
-              <p>I love that it can connect anyone anywhere at anytime, but I hate that it can connect people around the wrong things.</p>
-              <p>I love how it is malleable and nothing is ever fixed, but I hate having to change everything all the time because someone didn't think about what to do before we did it.</p>
-              <p>I love that the code is easy to learn and use, but I hate that the same ease of use hurts my ability to make money building things on the Web.</p>
+              <p>Build systems are awesome. If you're developing similar websites or apps over and over using the same tools, you should look into creating a small build system that will give you a head start on setting up a project. You can always add packages or tools to the build, but you can't get back the time it takes to set up the same baseline tools you used in the last 10 projects.</p>
+              <p>One thing I've been struggling with for a few weeks is a build system that was handed to me from an outside company. I've been fiddling with it and just can't get it to work. I'm trying to deconstruct and reconstruct it now but there are some things baked into it that I'm having a hard time extracting.</p>
+              <P>Based on this experience, one question I think you need to consider when building your own system is: Can someone else easily set up and step into this workflow? Can someone who doesn't own my hardware take this entire system and use it without issue?</P>
+              <p>It's probably impossible to know if your system works on all computers, but here are some general strategies that I've thought of:</p>
+              <ul>
+                <li>Use open source technologies</li>
+                <li>Use technologies that are cross-platform</li>
+                <li>Keep your abstraction layers as flat as possible</li>
+                <li>Put the code on Github or some other Git service</li>
+                <li>Write documentation and fix bugs as they happen</li>
+              </ul>
+              <p>In my experience of <a href="https://github.com/brianhaferkamp/20-mile-head-start" target="_blank">sharing my own build system</a> and using the build systems of others, these are pretty good guidelines. While you want to make your build system your own and utilize tools that help <i>you</i> build websites more efficiently, I believe you should also consider what would happen if you had to hand off the entire build system (not just the output files) to another developer.</p>
               <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
             </article>
           </div>
           <!-- Comments-->
-          <footer class="comments">
-            <header>
-              <h4 class="comments-headline">Comments</h4>
-              <p>Click the heart to show your appreciation. Click the Twitter bird to reply.</p>
-              <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Love and Hate<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Website?src=hash&amp;ref_src=twsrc%5Etfw">#Website</a> <a href="https://twitter.com/hashtag/Web?src=hash&amp;ref_src=twsrc%5Etfw">#Web</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/Code?src=hash&amp;ref_src=twsrc%5Etfw">#Code</a> <a href="https://t.co/YyhoTt40PC">pic.twitter.com/YyhoTt40PC</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1154014217755930624?ref_src=twsrc%5Etfw">July 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-            </header>
-          </footer>
+          <!--footer.comments
+          header
+            h4.comments-headline Comments
+            p Click the heart to show your appreciation. Click the Twitter bird to reply.
+            .comment-tweet
+          -->
         </div>
       </section>
     </div>
