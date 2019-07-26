@@ -473,8 +473,11 @@ figcaption {
 }
 
 .stories-group {
-  margin-bottom: 48px;
-  margin-bottom: 3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 32px;
+  padding-bottom: 2rem;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .stories-image {
@@ -528,19 +531,6 @@ figcaption {
   font-size: 1rem;
   margin-bottom: 48px;
   margin-bottom: 3rem;
-}
-
-footer {
-  padding: 16px 0;
-  padding: 1rem 0;
-  border-radius: 5px;
-  margin-top: 16px;
-  margin-top: 1rem;
-}
-
-.comment-tweet {
-  margin-top: 32px;
-  margin-top: 2rem;
 }
 
 .archive-group {
@@ -631,20 +621,16 @@ footer {
   }
 }
 
-@media (min-width: 1170px) {
-
-  .stories-group {
-    margin-bottom: 0;
-  }
-
-  .archive-group {
-    margin-bottom: 6rem;
-  }
-}
-
 @media (min-width: 700px) {
 
   .archive-group {
     margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1170px) {
+
+  .archive-group {
+    margin-bottom: 6rem;
   }
 }
