@@ -4,6 +4,8 @@
 
 $(document).ready(function() {
 
-  // Write your jQuery here
+  $(function(){
+    $('.stories-group.lazy').lazy();
+  });
 
 });
