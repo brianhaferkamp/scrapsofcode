@@ -4,8 +4,6 @@
 
 $(document).ready(function() {
 
-  $(function(){
-    $('.stories-group.lazy').lazy();
-  });
+  lazyload();
 
 });
