@@ -454,11 +454,21 @@ figcaption {
   font-size: .9rem;
 }
 
-.feed-link {
+.nav-link {
   text-decoration: none;
+  display: block;
 }
 
-.feed-link i {
+.nav-link:first-child {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link i {
   margin-right: 5px;
 }
 
