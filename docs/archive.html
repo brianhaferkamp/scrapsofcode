@@ -22,7 +22,7 @@
               <h1 class="masthead-title">Scraps of Code</h1></a>
             <h2 class="masthead-subtitle">A front end dev blog</h2>
           </div>
-          <div class="feed"><a class="feed-link" href="http://fetchrss.com/rss/5d0bafa78a93f8e02e8b45675d0baf7f8a93f8ad2c8b4567.xml" target="_blank"><i class="zmdi zmdi-rss"></i> RSS Feed</a></div>
+          <div class="nav-links"><a class="nav-link feed-link" href="http://fetchrss.com/rss/5d0bafa78a93f8e02e8b45675d0baf7f8a93f8ad2c8b4567.xml" target="_blank"><i class="zmdi zmdi-rss"></i> RSS Feed</a><a class="nav-link" href="https://twitter.com/BrianHaferkamp" target="_blank"><i class="zmdi zmdi-twitter"></i> Follow on Twitter</a></div>
         </div>
       </div>
       <section id="archive">
@@ -30,7 +30,31 @@
           <header>
             <h3 class="page-headline">Post Archive</h3>
           </header>
-          <div class="stories-group">
+          <div class="stories-group lazy">
+            <h4 class="stories-group-date">July 25, 2019</h4>
+            <h3 class="stories-group-headline">A Note on Build Systems</h3>
+            <section class="stories-image">
+              <figure><img src="assets/img/build-system.jpg" alt="An Amish barn raising with lots of men in blue shirts working on the building"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/ymf4_9Y9S_A" target="_blank">Randy Fath on Unsplash</a></small></figcaption>
+              </figure>
+            </section>
+            <article class="stories-group-content">
+              <p>Build systems are awesome. If you're developing similar websites or apps over and over using the same tools, you should look into creating a small build system that will give you a head start on setting up a project. You can always add packages or tools to the build, but you can't get back the time it takes to set up the same baseline tools you used in the last 10 projects.</p>
+              <p>One thing I've been struggling with for a few weeks is a build system that was handed to me from an outside company. I've been fiddling with it and just can't get it to work. I'm trying to deconstruct and reconstruct it now but there are some things baked into it that I'm having a hard time extracting.</p>
+              <P>Based on this experience, one question I think you need to consider when building your own system is: Can someone else easily set up and step into this workflow? Can someone who doesn't own my hardware take this entire system and use it without issue?</P>
+              <p>It's probably impossible to know if your system works on all computers, but here are some general strategies that I've thought of:</p>
+              <ul>
+                <li>Use open source technologies</li>
+                <li>Use technologies that are cross-platform</li>
+                <li>Keep your abstraction layers as flat as possible</li>
+                <li>Put the code on Github or some other Git service</li>
+                <li>Write documentation and fix bugs as they happen</li>
+              </ul>
+              <p>In my experience of <a href="https://github.com/brianhaferkamp/20-mile-head-start" target="_blank">sharing my own build system</a> and using the build systems of others, these are pretty good guidelines. While you want to make your build system your own and utilize tools that help <i>you</i> build websites more efficiently, I believe you should also consider what would happen if you had to hand off the entire build system (not just the output files) to another developer.</p>
+              <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
+            </article>
+          </div>
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 24, 2019</h4>
             <h3 class="stories-group-headline">Love and Hate</h3>
             <section class="stories-image">
@@ -54,7 +78,7 @@
               <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Love and Hate<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Website?src=hash&amp;ref_src=twsrc%5Etfw">#Website</a> <a href="https://twitter.com/hashtag/Web?src=hash&amp;ref_src=twsrc%5Etfw">#Web</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/Code?src=hash&amp;ref_src=twsrc%5Etfw">#Code</a> <a href="https://t.co/YyhoTt40PC">pic.twitter.com/YyhoTt40PC</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1154014217755930624?ref_src=twsrc%5Etfw">July 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 23, 2019</h4>
             <h3 class="stories-group-headline">YouTube-Style Album Art</h3>
             <section class="stories-image">
@@ -78,7 +102,7 @@
               <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>-Style Album Art<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/YouTube?src=hash&amp;ref_src=twsrc%5Etfw">#YouTube</a> <a href="https://twitter.com/CodePen?ref_src=twsrc%5Etfw">@CodePen</a> <a href="https://twitter.com/hashtag/Music?src=hash&amp;ref_src=twsrc%5Etfw">#Music</a> <a href="https://twitter.com/hashtag/DigitalMusic?src=hash&amp;ref_src=twsrc%5Etfw">#DigitalMusic</a> <a href="https://t.co/gEZWfAFbNI">pic.twitter.com/gEZWfAFbNI</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1153644784558497792?ref_src=twsrc%5Etfw">July 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 22, 2019</h4>
             <h3 class="stories-group-headline">Creating a Web Development System</h3>
             <section class="stories-image">
@@ -110,7 +134,7 @@
               <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>Creating a Web Development System<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/JS?src=hash&amp;ref_src=twsrc%5Etfw">#JS</a> <a href="https://twitter.com/hashtag/JavaScript?src=hash&amp;ref_src=twsrc%5Etfw">#JavaScript</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://twitter.com/hashtag/PWA?src=hash&amp;ref_src=twsrc%5Etfw">#PWA</a> <a href="https://twitter.com/hashtag/ServiceWorker?src=hash&amp;ref_src=twsrc%5Etfw">#ServiceWorker</a> <a href="https://t.co/YzIkJRYSfP">pic.twitter.com/YzIkJRYSfP</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1153298750607151104?ref_src=twsrc%5Etfw">July 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 19, 2019</h4>
             <h3 class="stories-group-headline">Getting Real About Corporate Web Development</h3>
             <section class="stories-image">
@@ -137,7 +161,7 @@
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 18, 2019</h4>
             <h3 class="stories-group-headline">A Note on Source Order</h3>
             <section class="stories-image">
@@ -163,7 +187,7 @@
               <div class="comment-tweet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today on <a href="https://twitter.com/hashtag/ScrapsOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#ScrapsOfCode</a>✨<br><br>A Note on Source Order<a href="https://t.co/C3sC4w4uSY">https://t.co/C3sC4w4uSY</a><a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/WebDesign?src=hash&amp;ref_src=twsrc%5Etfw">#WebDesign</a> <a href="https://twitter.com/hashtag/Design?src=hash&amp;ref_src=twsrc%5Etfw">#Design</a> <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/CodeNewbie?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbie</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/FrontEnd?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEnd</a> <a href="https://twitter.com/hashtag/FrontEndDeveloper?src=hash&amp;ref_src=twsrc%5Etfw">#FrontEndDeveloper</a> <a href="https://t.co/GjG7qxlBFB">pic.twitter.com/GjG7qxlBFB</a></p>&mdash; Brian Haferkamp (@BrianHaferkamp) <a href="https://twitter.com/BrianHaferkamp/status/1151836274422157317?ref_src=twsrc%5Etfw">July 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 17, 2019</h4>
             <h3 class="stories-group-headline">Easy Centering with CSS Grid</h3>
             <section class="stories-image">
@@ -229,7 +253,7 @@
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 16, 2019</h4>
             <h3 class="stories-group-headline">Auditing Your Web App with Lighthouse</h3>
             <section class="stories-image">
@@ -259,7 +283,7 @@
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 15, 2019</h4>
             <h3 class="stories-group-headline">Creating a Web App Manifest</h3>
             <section class="stories-image">
@@ -327,7 +351,7 @@
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 12, 2019</h4>
             <h3 class="stories-group-headline">Adding a Service Worker to Your Web Site</h3>
             <section class="stories-image"><img src="assets/img/no-connection.png" alt="A blue circle with a Wi-Fi signal and a line crossed through it representing no network connection"/></section>
@@ -588,7 +612,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 11, 2019</h4>
             <h3 class="stories-group-headline">Service Workers</h3>
             <section class="stories-image">
@@ -626,7 +650,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 10, 2019</h4>
             <h3 class="stories-group-headline">Front End Development Challenge #1</h3>
             <section class="stories-image"><img src="assets/img/frontEndChallenge1.jpg", alt="A hero section with purple-pink background and three lines of centered text"></section>
@@ -653,7 +677,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 8, 2019</h4>
             <h3 class="stories-group-headline">Image Filters Using CSS</h3>
             <section class="stories-image">
@@ -679,7 +703,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 5, 2019</h4>
             <h3 class="stories-group-headline">A Mini-Course on Creating Responsive Images for the Web</h3>
             <section class="stories-image">
@@ -708,7 +732,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 3, 2019</h4>
             <h3 class="stories-group-headline">Building in Augmented and Virtual Realities</h3>
             <section class="stories-image">
@@ -734,7 +758,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 2, 2019</h4>
             <h3 class="stories-group-headline">Designers Who Code, Coders Who Design</h3>
             <section class="stories-image">
@@ -763,7 +787,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">July 1, 2019</h4>
             <h3 class="stories-group-headline">Website Critique</h3>
             <section class="stories-image flex-video"><iframe src="https://www.youtube.com/embed/sQHn_2t42wI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
@@ -783,7 +807,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 28, 2019</h4>
             <h3 class="stories-group-headline">Getting Older in Tech</h3>
             <section class="stories-image">
@@ -814,7 +838,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 27, 2019</h4>
             <h3 class="stories-group-headline">HTML-Only FAQs</h3>
             <section class="stories-image">
@@ -847,7 +871,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 26, 2019</h4>
             <h3 class="stories-group-headline">Autofocus on Page Load</h3>
             <section class="stories-image">
@@ -881,7 +905,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 25, 2019</h4>
             <h3 class="stories-group-headline">Shopping in Augmented Reality</h3>
             <section class="stories-image">
@@ -912,7 +936,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 24, 2019</h4>
             <h3 class="stories-group-headline">Cross-Fading Images Using CSS</h3>
             <section class="stories-image">
@@ -939,7 +963,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 21, 2019</h4>
             <h3 class="stories-group-headline">A Framework for Critiquing Web Design</h3>
             <section class="stories-image">
@@ -965,7 +989,7 @@ self.addEventListener('fetch', (e) => {
               <p>If you have a design you'd like to have critiqued on <a href="https://www.youtube.com/channel/UCiwvLFLe1xjQO9v7uPxKAnQ" target="_blank">my YouTube channel</a>, email the link to brian@highwaywebconsulting.com or you can <a href="http://highwaywebconsulting.com/contact.html" target="_blank">use the contact form on my website</a> to submit the link.</p>
             </article>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 20, 2019</h4>
             <h3 class="stories-group-headline">Sticky Sections on Scroll (CSS Only)</h3>
             <section class="stories-image flex-video"><iframe src="https://www.youtube.com/embed/6ByJDOWVDyU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
@@ -992,7 +1016,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 19, 2019</h4>
             <h3 class="stories-group-headline">My Everyday Web Development Tools</h3>
             <section class="stories-image">
@@ -1020,7 +1044,7 @@ self.addEventListener('fetch', (e) => {
               <p>What are some of your favorite tools to use for web development?</p>
             </article>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 18, 2019</h4>
             <h3 class="stories-group-headline">Responsive Images for the Web</h3>
             <section class="stories-image flex-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/supHtvOa3NE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
@@ -1057,7 +1081,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 17, 2019</h4>
             <h3 class="stories-group-headline">Learn the Basics</h3>
             <section class="stories-image">
@@ -1084,7 +1108,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 14, 2019</h4>
             <h3 class="stories-group-headline">On Remote Working</h3>
             <section class="stories-image flex-video">
@@ -1124,7 +1148,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 13, 2019</h4>
             <h3 class="stories-group-headline">Full Height Content Section Using CSS Grid</h3>
             <section class="stories-image flex-video">
@@ -1166,7 +1190,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 12, 2019</h4>
             <h3 class="stories-group-headline">Sticky Transparent Header</h3>
             <section class="stories-image flex-video"><iframe src="https://www.youtube.com/embed/a7Hj4BUXST0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
@@ -1185,7 +1209,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 11, 2019</h4>
             <h3 class="stories-group-headline">The Developer's New Groove</h3>
             <h3 class="stories-group-subheadline">Tips on finding your own groove so you can write better code and enjoy doing it</h3>
@@ -1219,7 +1243,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 10, 2019</h4>
             <h3 class="stories-group-headline">Fullscreen Video Player</h3>
             <section class="stories-image">
@@ -1245,7 +1269,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 7, 2019</h4>
             <h3 class="stories-group-headline">The Future of Web Development</h3>
             <section class="stories-image">
@@ -1272,7 +1296,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 6, 2019</h4>
             <h3 class="stories-group-headline">Banded Features Section Using CSS Grid</h3>
             <section class="stories-image"></section>
@@ -1305,7 +1329,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 5, 2019</h4>
             <h3 class="stories-group-headline">Web Dev Education Platform Progress Update</h3>
             <section class="stories-image"></section>
@@ -1331,7 +1355,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 4, 2019</h4>
             <h3 class="stories-group-headline">Accessibility is Part of the Job</h3>
             <section class="stories-image">
@@ -1371,7 +1395,7 @@ self.addEventListener('fetch', (e) => {
               </div>
             </header>
           </footer>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">June 3, 2019</h4>
             <h3 class="stories-group-headline">Make the Web Interesting</h3>
             <section class="stories-image flex-video"><iframe src="https://www.youtube.com/embed/Aw_8ShVqbEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
@@ -1391,7 +1415,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 31, 2019</h4>
             <h3 class="stories-group-headline">Advice for New Web Developers</h3>
             <section class="stories-image">
@@ -1421,7 +1445,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 30, 2019</h4>
             <h3 class="stories-group-headline">Evoking Emotion in Web Design</h3>
             <section class="stories-image">
@@ -1448,7 +1472,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 28, 2019</h4>
             <h3 class="stories-group-headline">Something and Nothing</h3>
             <section class="stories-image"><img src="assets/img/blank-page.jpg" alt="A blank card clipped to a rope against a gray wall"/></section>
@@ -1469,7 +1493,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 24, 2019</h4>
             <h3 class="stories-group-headline">Video Tutorial: Build a Full-Screen Landing Page Header</h3>
             <section class="stories-image">
@@ -1490,7 +1514,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 23, 2019</h4>
             <h3 class="stories-group-headline">Animate Elements in Multiple Sections on Scroll</h3>
             <section class="stories-image">
@@ -1516,7 +1540,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 22, 2019</h4>
             <h3 class="stories-group-headline">A Hand-Crafted Blog</h3>
             <section class="stories-image"><img src="assets/img/hand-crafted.jpg" alt="A man crafting a piece of hot metal in a metal working shop"/></section>
@@ -1538,7 +1562,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 21, 2019</h4>
             <h3 class="stories-group-headline">Learning Web Development Online</h3>
             <section class="stories-image"><img src="assets/img/online-learning.jpg" alt="A tattooed woman sitting in a wooden chair in a modern coffee shop"/></section>
@@ -1569,7 +1593,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 20, 2019</h4>
             <h3 class="stories-group-headline">Utility and Beauty</h3>
             <section class="stories-image"><img src="assets/img/utility-beauty.jpg" alt="A smart phone showing the app for the Oculus Rift VR headset"/></section>
@@ -1590,7 +1614,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 17, 2019</h4>
             <h3 class="stories-group-headline">Centering an Element with CSS</h3>
             <section class="stories-image">
@@ -1615,7 +1639,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 16, 2019</h4>
             <h3 class="stories-group-headline">Ghosted by Clients</h3>
             <section class="stories-image"><img src="assets/img/ghosted.jpg" alt="A man sitting cross-legged on a park bench seemingly unaware there is a ghost standing behind him"/></section>
@@ -1640,7 +1664,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 15, 2019</h4>
             <h3 class="stories-group-headline">A Brief Apology for jQuery</h3>
             <section class="stories-image"><img src="assets/img/jquery.jpg" alt="Books about HTML, CSS, JavaScript, and jQuery sitting on a shelf next to a cactus"/></section>
@@ -1662,7 +1686,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 14, 2019</h4>
             <h3 class="stories-group-headline">Video: How to Use an API to Get Data for Your Website or Web App</h3>
             <section class="stories-image">
@@ -1682,7 +1706,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 13, 2019</h4>
             <h3 class="stories-group-headline">Basic Portfolio Filtering System</h3>
             <section class="stories-image"><p class="codepen" data-height="524" data-theme-id="26191" data-default-tab="result" data-user="brianhaferkamp" data-slug-hash="ZyOjPo" data-editable="true" style="height: 524px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Basic Portfolio Filtering System // jQuery // UI/UX // CSS Grid">
@@ -1707,7 +1731,7 @@ self.addEventListener('fetch', (e) => {
               </header>
             </footer>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 10, 2019</h4>
             <h3 class="stories-group-headline">Listening for Appropriate Solutions</h3>
             <!-- h3.stories-group-subheadline-->
@@ -1719,7 +1743,7 @@ self.addEventListener('fetch', (e) => {
               <p>So here's a solution. Listen to the client. Determine the most appropriate development solution/stack/platform and then either deliver that out of your own knowledge or begin to create a network of other devs/agencies that you can pass clients along to who specialize in the work the client needs. Consider setting up a small finders fee, if the person/agency is willing. It would be better to make a client happy because you listened to him/her and provided an appropriate solution. Burdening the client with the responsibilities of a printing press when all he/she needed was a printer is irresponsible and short-sighted. Let's do better.</p>
             </article>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h4 class="stories-group-date">May 9, 2019</h4>
             <h3 class="stories-group-headline">What is a Website?</h3>
             <h3 class="stories-group-subheadline">Thoughts on understanding the value of a website</h3>
@@ -1737,7 +1761,7 @@ self.addEventListener('fetch', (e) => {
               <p>I'm wondering if I need to have the value talk first thing in the conversation just to lay the groundwork for the value that is being provided to the client. Then we can get into the nitty gritty of what will be on the site itself. Maybe that would change the whole conversation about monetary value.</p>
             </article>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h3 class="stories-group-headline">A Cog in the White Collar Assembly Line</h3>
             <h4 class="stories-group-date">May 8, 2019</h4>
             <section class="stories-image"><img src="assets/img/mcdonalds-assembly-line.jpg" alt="McDonalds workers putting food together on an assembly line"/></section>
@@ -1755,7 +1779,7 @@ self.addEventListener('fetch', (e) => {
               <p>I have to believe there is a way to have my cake and eat it, too. My day job is "code monkey." What I want to do and how I want to affect the world is so much bigger, though. So I've tried to create some spaces where I can utilize all of the new things I'm learning, even if my job has no use for them. If you've outgrown your job it might not be that you need to leave the regular paycheck. It might be that you just need to build some places for your new, expansive self to go within the confines of your present life.</p>
             </article>
           </div>
-          <div class="stories-group">
+          <div class="stories-group lazy">
             <h3 class="stories-group-headline">Art Direction on the Web</h3>
             <h4 class="stories-group-date">May 7, 2019</h4>
             <section class="stories-image"><a title="Piet Mondrian [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Piet_Mondriaan_-_03.jpg"><img width="1024" alt="Piet Mondriaan - 03" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Piet_Mondriaan_-_03.jpg/1024px-Piet_Mondriaan_-_03.jpg"/></a></section>
@@ -1785,9 +1809,11 @@ self.addEventListener('fetch', (e) => {
     </div>
     <!-- Loads jQuery (Delete if you're using vanilla JS)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Loads app-specific JS-->
-    <script src="./assets/js/app.js"></script>
     <!-- Load AddThis Code-->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cf11d30407c6e5a"></script>
+    <!-- Load Lazy.js-->
+    <script type="text/javascript" src="./assets/js/jquery.lazy.min.js"></script>
+    <!-- Loads app-specific JS-->
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

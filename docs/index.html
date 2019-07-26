@@ -22,7 +22,7 @@
               <h1 class="masthead-title">Scraps of Code</h1></a>
             <h2 class="masthead-subtitle">A front end dev blog</h2>
           </div>
-          <div class="feed"><a class="feed-link" href="http://fetchrss.com/rss/5d0bafa78a93f8e02e8b45675d0baf7f8a93f8ad2c8b4567.xml" target="_blank"><i class="zmdi zmdi-rss"></i> RSS Feed</a></div>
+          <div class="nav-links"><a class="nav-link feed-link" href="http://fetchrss.com/rss/5d0bafa78a93f8e02e8b45675d0baf7f8a93f8ad2c8b4567.xml" target="_blank"><i class="zmdi zmdi-rss"></i> RSS Feed</a><a class="nav-link" href="https://twitter.com/BrianHaferkamp" target="_blank"><i class="zmdi zmdi-twitter"></i> Follow on Twitter</a></div>
         </div>
       </div>
       <section id="stories">
@@ -32,28 +32,18 @@
           
           -->
           <div class="stories-group">
-            <h4 class="stories-group-date">July 25, 2019</h4>
-            <h3 class="stories-group-headline">A Note on Build Systems</h3>
+            <h4 class="stories-group-date">July 26, 2019</h4>
+            <h3 class="stories-group-headline">No Comment</h3>
             <section class="stories-image">
-              <figure><img src="assets/img/build-system.jpg" alt="An Amish barn raising with lots of men in blue shirts working on the building"/>
-                <figcaption><small>Photo by <a href="https://unsplash.com/photos/ymf4_9Y9S_A" target="_blank">Randy Fath on Unsplash</a></small></figcaption>
+              <figure><img src="assets/img/no-comment.jpg" alt="A sign that says, &quot;We like you too&quot;"/>
+                <figcaption><small>Photo by <a href="https://unsplash.com/photos/8pOTAtyd_Mc" target="_blank">Adam Jang on Unsplash</a></small></figcaption>
               </figure>
             </section>
             <article class="stories-group-content">
-              <p>Build systems are awesome. If you're developing similar websites or apps over and over using the same tools, you should look into creating a small build system that will give you a head start on setting up a project. You can always add packages or tools to the build, but you can't get back the time it takes to set up the same baseline tools you used in the last 10 projects.</p>
-              <p>One thing I've been struggling with for a few weeks is a build system that was handed to me from an outside company. I've been fiddling with it and just can't get it to work. I'm trying to deconstruct and reconstruct it now but there are some things baked into it that I'm having a hard time extracting.</p>
-              <P>Based on this experience, one question I think you need to consider when building your own system is: Can someone else easily set up and step into this workflow? Can someone who doesn't own my hardware take this entire system and use it without issue?</P>
-              <p>It's probably impossible to know if your system works on all computers, but here are some general strategies that I've thought of:</p>
-              <ul>
-                <li>Use open source technologies</li>
-                <li>Use technologies that are cross-platform</li>
-                <li>Keep your abstraction layers as flat as possible</li>
-                <li>Put the code on Github or some other Git service</li>
-                <li>Write documentation and fix bugs as they happen</li>
-              </ul>
-              <p>In my experience of <a href="https://github.com/brianhaferkamp/20-mile-head-start" target="_blank">sharing my own build system</a> and using the build systems of others, these are pretty good guidelines. While you want to make your build system your own and utilize tools that help <i>you</i> build websites more efficiently, I believe you should also consider what would happen if you had to hand off the entire build system (not just the output files) to another developer.</p>
-              <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
+              <p>This blog is sort of an experiment in ideas that I have. One of those ideas was to use Twitter cards as a commenting system. I knew that this was limited (if not doomed) from the beginning for this obvious reason: Not everyone is on Twitter. But I thought if I only talked about it on Twitter that I would get mostly people with Twitter accounts. That might have happened, but there have been months with no comments, so I'm pulling the plug on comments altogether. I realize that comments have largely been on their way out over the years, so I'm really just joining the herd.</p>
+              <p>On another house cleaning note, if you'd like to catch up on previous posts, <a href="archive.html">check out the archive page</a>.</p>
             </article>
+            <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
           </div>
           <!-- Comments-->
           <!--footer.comments
@@ -67,6 +57,8 @@
     </div>
     <!-- Loads jQuery (Delete if you're using vanilla JS)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Load Lazy.js-->
+    <script type="text/javascript" src="./assets/js/jquery.lazy.min.js"></script>
     <!-- Loads app-specific JS-->
     <script src="./assets/js/app.js"></script>
     <!-- Load AddThis Code-->
