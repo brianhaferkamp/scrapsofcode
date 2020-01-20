@@ -1,5 +1,5 @@
 if (Mavo.dataLoaded) {
-  consolel.log('All Data Loaded');
+  console.log('All Data Loaded');
 }
 
 $('.article-link').on('click', function(e) {
