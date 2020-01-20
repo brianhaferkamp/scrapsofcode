@@ -1,60 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Scraps of Code | A front end dev blog</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- Load a favicon-->
-    <link rel="shortcut icon" href="./assets/img/favicons/favicon.ico"/>
-    <!-- Load font icons-->
-    <!-- Material Design Iconic Font - (http://zavoloklom.github.io/material-design-iconic-font/index.html)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"/>
-    <!-- Load Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet"/>
-    <!-- Load the main stylesheet-->
-    <link rel="stylesheet" href="assets/css/main.css"/>
-  </head>
-  <body>
-    <div id="app">
-      <div id="masthead">
-        <div class="section-inner">
-          <div class="title"><a class="masthead-link" href="https://brianhaferkamp.github.io/scrapsofcode/">
-              <h1 class="masthead-title">Scraps of Code</h1></a>
-            <h2 class="masthead-subtitle">A front end dev blog</h2>
-          </div>
-          <div class="nav-links"><a class="nav-link feed-link" href="archive.html"><i class="zmdi zmdi-archive"></i> Archive</a><a class="nav-link" href="https://twitter.com/BrianHaferkamp" target="_blank"><i class="zmdi zmdi-twitter"></i> Follow on Twitter</a></div>
-        </div>
-      </div>
-      <section id="stories">
-        <div class="stories-inner">
-          <!-- header
-          h3.page-headline Today
-          
-          -->
-          <div class="stories-group">
-            <h4 class="stories-group-date">August 8, 2019</h4>
-            <h3 class="stories-group-headline">Fix Common CSS Grid Spacing Issues</h3>
-            <section class="stories-image flex-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/-_vvEk2PMMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
-            <article class="stories-group-content">
-              <p>I've been using CSS Grid Layout since 2017 and over the years have found some common issues with spacing that could be a little confusing for people learning Grid for the first time. In this video, I'll show you how to get rid of a those spacing issues. Hopefully, it will help you on your CSS Grid journey. If you have any questions or comments please leave them in the comments section of the video.</p>
-            </article>
-            <!-- AddThis Sharing--><div class="addthis_inline_share_toolbox"></div>
-          </div>
-          <!-- Comments-->
-          <!--footer.comments
-          header
-            h4.comments-headline Comments
-            p Click the heart to show your appreciation. Click the Twitter bird to reply.
-            .comment-tweet
-          -->
-        </div>
-      </section>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Scraps of Code v2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Include Mavo.io -->
+<script src="https://get.mavo.io/stable/mavo.es5.min.js"></script>
+<link rel="stylesheet" href="https://get.mavo.io/stable/mavo.css">
+
+<!-- Load Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700">
+
+
+<!-- Load AddThis code -->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cf11d30407c6e5a"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-text">
+      <h1 class="site-title">Scraps of Code</h1>
+      <h2 class="site-subtitle">A front end developer blog</h2>
     </div>
-    <!-- Loads jQuery (Delete if you're using vanilla JS)-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Loads app-specific JS-->
-    <script src="./assets/js/app.js"></script>
-    <!-- Load AddThis Code-->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cf11d30407c6e5a"></script>
-  </body>
+    <p class="masthead-social"><i class="zmdi zmdi-twitter"></i> <a class="masthead-social-link" href="https://twitter.com/BrianHaferkamp" target="_blank">Follow me on Twitter</a></p>
+  </div>
+</header>
+<main class="articles" mv-app="scrapsofcode" mv-storage="https://github.com/brianhaferkamp/scrapsofcode" mv-plugins="markdown" mv-bar="no-login">
+  <article class="article" property="article" mv-multiple="mv-multiple" mv-order="desc" id="[idify(articleheadline)]">
+    <div class="article-meta">
+      <p class="article-date" property="articledate">January 20, 2020</p><a class="article-link" href="https://brianhaferkamp.github.io/scrapsofcode/#[idify(articleheadline)]"><i class="zmdi zmdi-link"></i></a>
+    </div>
+    <div class="article-share-link" hidden="hidden">
+      <p>Share this post <i class="zmdi zmdi-close"></i></p>
+      <div class="article-share-input"> 
+        <input type="text"/>
+      </div>
+    </div>
+    <h3 class="article-headline" property="articleheadline">A really, really long headline goes here</h3>
+    <div class="article-content markdown" property="articlecontent"></div>
+  </article>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
