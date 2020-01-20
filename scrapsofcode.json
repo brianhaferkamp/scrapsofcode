@@ -1,14 +1,9 @@
 {
 	"article": [
 		{
-			"articledate": "January 21, 2020",
-			"articleheadline": "An amazing headline",
-			"articlecontent": "Another great post!"
-		},
-		{
 			"articledate": "January 20, 2020",
-			"articleheadline": "A really, really long headline goes here",
-			"articlecontent": "Some amazing content for day 1"
+			"articleheadline": "Jump starting the blog",
+			"articlecontent": "I've let my blogging go by the wayside, so I'm jump starting it. I'm trying to incorporate a more sustainable model for writing the code. \n\nIn this iteration I'm using Mavo.io to add in-browser editing. This allows me to create posts without getting into any code. I just go to the home feed, login to Github, and start creating a new post using Mavo's interface. \n\n![Screenshot that shows the Mavo.io interface](https://github.com/brianhaferkamp/scrapsofcode/docs/assets/img/using-mavo-interface.jpg \"Screenshot of the Mavo.io interface\")"
 		}
 	]
 }
