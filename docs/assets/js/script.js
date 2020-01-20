@@ -1,6 +1,4 @@
-Mavo.inited
-    .then(() => Mavo.all[0].dataLoaded)
-    .then(() => Mavo.all[0].render({"foo": ["e", "f", "g", "h", "i", "j"]}));
+console.log(Mavo.inited);
 
 // $('.article-link').on('click', function(e) {
 //   e.preventDefault();
