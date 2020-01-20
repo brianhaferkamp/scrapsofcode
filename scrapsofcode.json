@@ -1,8 +1,14 @@
 {
 	"article": [
 		{
+			"articledate": "January 21, 2020",
+			"articleheadline": "An amazing headline",
+			"articlecontent": "Another great post!"
+		},
+		{
 			"articledate": "January 20, 2020",
-			"articleheadline": "A really, really long headline goes here"
+			"articleheadline": "A really, really long headline goes here",
+			"articlecontent": "Some amazing content for day 1"
 		}
 	]
 }
