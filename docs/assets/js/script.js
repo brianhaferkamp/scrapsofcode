@@ -1,4 +1,4 @@
-function loadSharingLink() {
+function loadSharingLink(e) {
   e.preventDefault();
   var copiedText = $(this).attr('href');
   console.log(copiedText);
