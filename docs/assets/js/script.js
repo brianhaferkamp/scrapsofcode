@@ -1,5 +1,5 @@
 $('.article-link').on('click', function(e) {
-  e.preventDefault();
+//   e.preventDefault();
   var copiedText = $(this).attr('href');
   console.log(copiedText);
   var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
@@ -12,6 +12,6 @@ $('.article-link').on('click', function(e) {
 });
 
 
-$('.article-share-link i').on('click', function() {
-  $('.article-share-link').slideUp();
-});
+// $('.article-share-link i').on('click', function() {
+//   $('.article-share-link').slideUp();
+// });
