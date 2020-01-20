@@ -1,5 +1,4 @@
-function loadSharingLink(e) {
-  e.preventDefault();
+function loadSharingLink() {  
   var copiedText = $(this).attr('href');
   console.log(copiedText);
   var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
@@ -12,6 +11,7 @@ function loadSharingLink(e) {
 
 
 $('.article-link').on('click', function(e) {
+  e.preventDefault();
   loadSharingLink();
 });
 
