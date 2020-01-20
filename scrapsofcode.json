@@ -2,12 +2,17 @@
 	"article": [
 		{
 			"articledate": "January 20, 2020",
+			"articleheadline": "Jump starting the blog",
+			"articlecontent": "I've let my blogging go by the wayside, so I'm jump starting it. I'm trying to incorporate a more sustainable model for writing the posts. \n"
+		},
+		{
+			"articledate": "January 20, 2020",
 			"articleheadline": "Four Practical CSS Flexbox Examples",
 			"articlecontent": "When you're learning something new it can be difficult to find a real world example for using the technique. CSS Flexbox and CSS Grid can be like that in the beginning. I put together a video showing four real-world Flexbox examples that I use every day on production websites. You'll learn\n\n- Centering\n- Creating a horizontal nav\n- Creating a two-column layout\n- Reordering with Flexbox\n\n[Watch the video on YouTube](https://youtu.be/5-mMhJlJdFg)\n\n[Code on Codepen](https://codepen.io/brianhaferkamp/pen/ExaLjKq)"
 		},
 		{
 			"articledate": "January 20, 2020",
-			"articleheadline": "Jump starting the blog",
+			"articleheadline": "Jump starting the bloggggggg",
 			"articlecontent": "I've let my blogging go by the wayside, so I'm jump starting it. I'm trying to incorporate a more sustainable model for writing the posts. \n\nIn this iteration I'm using [Mavo.io](https://mavo.io/) to add in-browser editing. This allows me to create posts without getting into any code. I just come to this website, login to Github, and start creating a new post using Mavo's interface. \n\nI also notice I spend a lot of time figuring out interesting workarounds or layouts for work and those just sort of get lost in the shuffle of new things coming across my desk. I hope to capture a few more of those here on the blog so that I can revisit them and others can learn from my ~~mistakes~~ efforts.\n\nSo maybe not a post a day, but when things are blog worthy or I release a new tutorial video, it will get collected here. I'm hoping that's a more sustainable model.\n\nImpressed and want to share this wisdom with others, use the social icons to the right at the bottom of the viewport. To link to a specific post, click on the link icon opposite the post date. Take that link and share it with you will. It will send the user directly to the post on this page.\n\nTake the time to follow me on Twitter. I share interesting articles and tidbits there that probably won't wind up here. You can also use Twitter to leave me a comment or DM me if you'd like to talk. I look forward to connecting with you."
 		}
 	]
