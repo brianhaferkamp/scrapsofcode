@@ -1,4 +1,6 @@
-console.log(Mavo.inited);
+if (mavo.dataLoaded) {
+  console.log('Data loaded');
+}
 
 // $('.article-link').on('click', function(e) {
 //   e.preventDefault();
