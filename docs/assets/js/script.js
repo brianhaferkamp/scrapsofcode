@@ -1,4 +1,4 @@
-if (mavo.dataLoaded) {
+if (Mavo.dataLoaded) {
   console.log('Data loaded');
 }
 
