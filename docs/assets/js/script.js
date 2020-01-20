@@ -4,7 +4,7 @@ $('.article-link').on('click', function() {
 
 
 function loadSharingLink() {
-  var copiedText = $(this).attr('href');
+  var copiedText = $(this).attr('data-link');
   console.log(copiedText);
   var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
   console.log(currShareBox);
