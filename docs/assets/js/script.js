@@ -1,5 +1,5 @@
-$('.article-link').on('click', function(e) {
-//   e.preventDefault();
+function loadSharingLink() {
+  e.preventDefault();
   var copiedText = $(this).attr('href');
   console.log(copiedText);
   var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
@@ -7,8 +7,12 @@ $('.article-link').on('click', function(e) {
   var currShareBoxInput = $(this).parents('.article-meta').siblings('.article-share-link');
   console.log(currShareBoxInput);
   currShareBoxInput.find('input').val(copiedText);
-//   currShareBox.slideDown();
-//   return false;
+  currShareBox.slideDown();
+}
+
+
+$('.article-link').on('click', function(e) {
+  loadSharingLink();
 });
 
 
