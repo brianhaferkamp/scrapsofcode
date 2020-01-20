@@ -2,6 +2,11 @@
 	"article": [
 		{
 			"articledate": "January 20, 2020",
+			"articleheadline": "Some article headline",
+			"articlecontent": "Some content"
+		},
+		{
+			"articledate": "January 20, 2020",
 			"articleheadline": "Four Practical CSS Flexbox Examples",
 			"articlecontent": "When you're learning something new it can be difficult to find a real world example for using the technique. CSS Flexbox and CSS Grid can be like that in the beginning. I put together a video showing four real-world Flexbox examples that I use every day on production websites. You'll learn\n\n- Centering\n- Creating a horizontal nav\n- Creating a two-column layout\n- Reordering with Flexbox\n\n[Watch the video on YouTube](https://youtu.be/5-mMhJlJdFg)\n\n[Code on Codepen](https://codepen.io/brianhaferkamp/pen/ExaLjKq)"
 		},
