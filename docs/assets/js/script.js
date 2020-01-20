@@ -8,6 +8,7 @@ $('.article-link').on('click', function(e) {
   console.log(currShareBoxInput);
   currShareBoxInput.find('input').val(copiedText);
   currShareBox.slideDown();
+  return false;
 });
 
 
