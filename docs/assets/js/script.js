@@ -1,8 +1,10 @@
 $('.article-link').on('click', function(e) {
   e.preventDefault();
   var copiedText = $(this).attr('href');
-  $('.article-share-link input').val(copiedText);
-  $(this).parents('.article-meta').siblings('.article-share-link').slideDown();
+  var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
+  var currShareBoxInput = $(this).parents('.article-meta').siblings('.article-share-link').find('input');
+  currShareBoxInput.val(copiedText);
+  currShareBox.slideDown();
 });
 
 
