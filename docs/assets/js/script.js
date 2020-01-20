@@ -17,7 +17,7 @@ Mavo.inited
 //   console.log(currShareBoxInput);
 //   currShareBoxInput.find('input').val(copiedText);
 //   currShareBox.slideDown();
-}
+// }
 
 
 
