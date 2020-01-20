@@ -2,8 +2,8 @@ $('.article-link').on('click', function(e) {
   e.preventDefault();
   var copiedText = $(this).attr('href');
   var currShareBox = $(this).parents('.article-meta').siblings('.article-share-link');
-  var currShareBoxInput = $(this).parents('.article-meta').siblings('.article-share-link').find('input');
-  currShareBoxInput.val(copiedText);
+  var currShareBoxInput = $(this).parents('.article-meta').siblings('.article-share-link');
+  currShareBoxInput.find('input').val(copiedText);
   currShareBox.slideDown();
 });
 
