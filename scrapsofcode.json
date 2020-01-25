@@ -2,7 +2,7 @@
 	"article": [
 		{
 			"articledate": "January 25, 2020",
-			"articleheadline": "Atomic Design with Webflow",
+			"articleheadline": "Atomic Web Design with Webflow",
 			"articlecontent": "Yesterday I created a video tutorial showing how you can use Symbols in Webflow to create and reuse Atomic web design components. \n\nThe advantage to these components is that they are reusable across the site and can all be changed when you update text or styles one instance. This speeds up the development process because you don't have to recreate the same elements multiple times or go around copying and pasting elements from different parts of the site. Simply drag a symbol onto the page and you're done. \n\n<i class=\"zmdi zmdi-youtube-play\"></i> [Watch the video on YouTube](https://youtu.be/uE-I_-KgT6s)"
 		},
 		{
